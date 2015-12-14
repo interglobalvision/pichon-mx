@@ -39,5 +39,62 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+	 $recipe_metabox = new_cmb2_box( array(
+        'id'            => 'recipe_metabox',
+        'title'         => __( 'Recipe Metabox', 'cmb2' ),
+        'object_types'  => array( 'recipe', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $recipe_metabox->add_field( array(
+        'name'       => __( 'Ingredients', 'cmb2' ),
+        'desc'       => __( '...', 'cmb2' ),
+        'id'         => $prefix . 'ingredients',
+        'type'       => 'text',
+        'repeatable'      => true,
+    ) );
+
+	 $event_metabox = new_cmb2_box( array(
+        'id'            => 'event_metabox',
+        'title'         => __( 'Event Metabox', 'cmb2' ),
+        'object_types'  => array( 'events', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $event_metabox->add_field( array(
+        'name'       => __( 'Time & Date', 'cmb2' ),
+        'desc'       => __( '...', 'cmb2' ),
+        'id'         => $prefix . 'date',
+        'type'       => 'text_datetime_timestamp',
+    ) );
+
+    $event_metabox->add_field( array(
+        'name'       => __( 'Location', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'location',
+        'type'       => 'text',
+    ) );
+
+    $event_metabox->add_field( array(
+        'name'       => __( 'Location link', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'location_link',
+        'type'       => 'text_url',
+    ) );
+
+    $event_metabox->add_field( array(
+        'name'       => __( 'Ticket link', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'ticket_link',
+        'type'       => 'text_url',
+    ) );
 }
 ?>
