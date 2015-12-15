@@ -39,10 +39,9 @@
           "contactType" : "customer service"
         } ],
       "sameAs" : [
-        "http://www.facebook.com/your-profile",
+        "http://www.facebook.com/pichondf",
         "http://instagram.com/yourProfile",
-        "http://www.linkedin.com/in/yourprofile",
-        "http://plus.google.com/your_profile"
+        "http://twitter.com/Pichoooooon",
         ]
     }
   </script>
