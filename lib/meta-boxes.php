@@ -39,6 +39,8 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+	 // RECIPE
+
 	 $recipe_metabox = new_cmb2_box( array(
         'id'            => 'recipe_metabox',
         'title'         => __( 'Recipe Metabox', 'cmb2' ),
@@ -57,6 +59,8 @@ function igv_cmb_metaboxes() {
         'type'       => 'text',
         'repeatable'      => true,
     ) );
+
+    // EVENT
 
 	 $event_metabox = new_cmb2_box( array(
         'id'            => 'event_metabox',
@@ -96,5 +100,39 @@ function igv_cmb_metaboxes() {
         'id'         => $prefix . 'ticket_link',
         'type'       => 'text_url',
     ) );
+
+    // FRIEND
+
+	 $friend_metabox = new_cmb2_box( array(
+        'id'            => 'friend_metabox',
+        'title'         => __( 'Contact Details', 'cmb2' ),
+        'object_types'  => array( 'friend', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $friend_metabox->add_field( array(
+        'name'       => __( 'Website link', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'website_link',
+        'type'       => 'text_url',
+    ) );
+
+    $friend_metabox->add_field( array(
+        'name'       => __( 'Email address', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'email',
+        'type'       => 'text',
+    ) );
+
+    $friend_metabox->add_field( array(
+        'name'       => __( 'Phone number', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'phone',
+        'type'       => 'text',
+    ) );
+
 }
 ?>
