@@ -101,6 +101,25 @@ function igv_cmb_metaboxes() {
         'type'       => 'text_url',
     ) );
 
+    // PRESS
+
+	 $press_metabox = new_cmb2_box( array(
+        'id'            => 'press_metabox',
+        'title'         => __( 'Press Metabox', 'cmb2' ),
+        'object_types'  => array( 'press', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $press_metabox->add_field( array(
+        'name'       => __( 'Download PDF/file', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'file',
+        'type'       => 'file',
+    ) );
+
     // FRIEND
 
 	 $friend_metabox = new_cmb2_box( array(
