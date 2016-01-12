@@ -15,28 +15,34 @@ if( have_posts() ) {
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-      <div class="container border-bottom">
-        <div class="row">
-          <div class="col s-col24 border-left">
-            <h2><?php the_title(); ?></h2>
+      <div class="border-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col s-col24 border-left">
+              <h2><?php the_title(); ?></h2>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="container border-bottom">
-        <div class="row">
-          <div class="col s-col2 force-col"></div>
-          <div class="col s-col22 border-left border-right">
-            <?php the_post_thumbnail(); ?>
+      <div class="border-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col s-col2 force-col"></div>
+            <div class="col s-col22 border-left border-right">
+              <?php the_post_thumbnail(); ?>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="container border-bottom">
-        <div class="row">
-          <div class="col s-col4 force-col"></div>
-          <div class="col s-col14 border-left border-right">
-            <?php the_content(); ?>
+      <div class="border-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col s-col4 force-col"></div>
+            <div class="col s-col14 border-left border-right">
+              <?php the_content(); ?>
+            </div>
           </div>
         </div>
       </div>
