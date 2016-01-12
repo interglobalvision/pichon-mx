@@ -18,21 +18,42 @@ if( have_posts() ) {
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-      <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+      <div class="container border-bottom">
+        <div class="row">
+          <div class="col s-col24 border-left">
+            <h2><?php the_title(); ?></h2>
+          </div>
+        </div>
+      </div>
 
-      <?php the_content(); ?>
+      <div class="container border-bottom">
+        <div class="row">
+          <div class="col s-col2 force-col"></div>
+          <div class="col s-col14 border-left border-right">
+            <?php the_post_thumbnail(); ?>
+          </div>
+          <div class="col s-col6 border-left border-right">
+            <h3>Ingredients</h3>
+            <ol>
+          <?php
+            if (!empty($ingredients)) {
+              foreach ($ingredients[0] as $ingredient) {
+                echo '<li>' . $ingredient . '</li>';
+              }
+            }
+          ?>
+            </ol>
+          </div>
+        </div>
+      </div>
 
-      <div>
-        <h4>ingredients</h4>
-        <ol>
-      <?php
-        if (!empty($ingredients)) {
-          foreach ($ingredients[0] as $ingredient) {
-            echo '<li>' . $ingredient . '</li>';
-          }
-        }
-      ?>
-        </ol>
+      <div class="container border-bottom">
+        <div class="row">
+          <div class="col s-col4 force-col"></div>
+          <div class="col s-col14 border-left border-right">
+            <?php the_content(); ?>
+          </div>
+        </div>
       </div>
 
     </article>
