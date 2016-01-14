@@ -15,7 +15,6 @@ if( have_posts() ) {
     the_post();
     $ingredients = get_post_meta($post->ID, '_igv_ingredients');
     $ingredients_tags = get_terms('ingredient');
-    pr($ingredients_tags);
 ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
