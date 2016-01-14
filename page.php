@@ -18,16 +18,6 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="row">
-            <div class="col s-col24 border-left">
-              <h2><?php the_title(); ?></h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border-bottom">
-        <div class="container">
-          <div class="row">
             <div class="col s-col2 force-col"></div>
             <div class="col s-col22 border-left border-right">
               <?php the_post_thumbnail(); ?>
@@ -39,9 +29,11 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="row">
-            <div class="col s-col4 force-col"></div>
-            <div class="col s-col14 border-left border-right">
+            <div class="col s-col16 border-left">
               <?php the_content(); ?>
+            </div>
+            <div class="col s-col8 border-left">
+              side column to be customized for different pages
             </div>
           </div>
         </div>

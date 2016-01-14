@@ -54,14 +54,22 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-    <ul>
-      <li><a href="<?php echo home_url('about-us/'); ?>">About Us</a></li>
-      <li><a href="<?php echo home_url('journal/'); ?>">Journal</a></li>
-      <li><a href="<?php echo home_url('recipes/'); ?>">Recipes</a></li>
-      <li><a href="<?php echo home_url('catering/'); ?>">Catering</a></li>
-      <li><a href="<?php echo home_url('friends/'); ?>">Friends</a></li>
-      <li><a href="<?php echo home_url('press/'); ?>">Press</a></li>
-    </ul>
-  </header>
+  <div class="border-bottom">
+    <header id="header" class="container">
+      <div class="row">
+        <div class="col s-col4">
+        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        </div>
+        <div class="col s-col20 background-green border-left">
+          <ul class="u-inline-list">
+            <li><a href="<?php echo home_url('about-us/'); ?>">About Us</a></li>
+            <li><a href="<?php echo home_url('journal/'); ?>">Journal</a></li>
+            <li><a href="<?php echo home_url('recipes/'); ?>">Recipes</a></li>
+            <li><a href="<?php echo home_url('catering/'); ?>">Catering</a></li>
+            <li><a href="<?php echo home_url('friends/'); ?>">Friends</a></li>
+            <li><a href="<?php echo home_url('press/'); ?>">Press</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>

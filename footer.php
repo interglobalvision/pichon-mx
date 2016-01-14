@@ -1,20 +1,33 @@
-    <footer id="footer">
+    <footer id="footer" class="background-green">
+      <div class="container">
+        <div class="row u-align-center">
+          <div class="col s-col8">
+            <ul>
+              <li><a href="<?php echo home_url('about-us/'); ?>">About Us</a></li>
+              <li><a href="<?php echo home_url('journal/'); ?>">Journal</a></li>
+              <li><a href="<?php echo home_url('recipes/'); ?>">Recipes</a></li>
+              <li><a href="<?php echo home_url('catering/'); ?>">Catering</a></li>
+              <li><a href="<?php echo home_url('friends/'); ?>">Friends</a></li>
+              <li><a href="<?php echo home_url('press/'); ?>">Press</a></li>
+            </ul>
+          </div>
 
-      <ul>
-        <li><a href="<?php echo home_url('about-us/'); ?>">About Us</a></li>
-        <li><a href="<?php echo home_url('journal/'); ?>">Journal</a></li>
-        <li><a href="<?php echo home_url('recipes/'); ?>">Recipes</a></li>
-        <li><a href="<?php echo home_url('catering/'); ?>">Catering</a></li>
-        <li><a href="<?php echo home_url('friends/'); ?>">Friends</a></li>
-        <li><a href="<?php echo home_url('press/'); ?>">Press</a></li>
-      </ul>
+          <div class="col s-col8">
+            <ul>
+              <li><a href="https://www.facebook.com/pichondf/" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/Pichoooooon" target="_blank">Instagram</a></li>
+              <li><a href="" target="_blank">Twitter</a></li>
+            </ul>
+          </div>
 
-      <ul>
-        <li><a href="https://www.facebook.com/pichondf/" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com/Pichoooooon" target="_blank">Instagram</a></li>
-        <li><a href="" target="_blank">Twitter</a></li>
-      </ul>
-
+          <div class="col s-col8">
+            <ul>
+              <li>Pichón.mx</li>
+              <li>copyright <?php echo date('Y'); ?>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
 
   </section>

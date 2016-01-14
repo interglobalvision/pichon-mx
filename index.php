@@ -11,19 +11,30 @@ get_header();
 
 <?php
 if( have_posts() ) {
+  $i = 1;
   while( have_posts() ) {
     the_post();
 ?>
-
-    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-      <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-
-      <?php the_content(); ?>
-
-    </article>
+    <div class="border-bottom">
+      <div class="container">
+        <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
+          <?php
+            if ($i % 2 === 0) {
+              echo '<div class="col s-col1 force-col"></div>';
+            }
+          ?>
+          <div class="col s-col10 border-left">
+            <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+          </div>
+          <div class="col s-col10 border-left">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        </article>
+      </div>
+    </div>
 
 <?php
+  $i++;
   }
 } else {
 ?>
