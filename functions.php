@@ -31,6 +31,12 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'name', 199, 299, true );
 }
 
+// LANGUAGES
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup(){
+  load_theme_textdomain('igv_pichon', get_template_directory() . '/languages');
+}
+
 // Register Nav Menus
 /*
 register_nav_menus( array(
