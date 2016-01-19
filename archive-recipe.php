@@ -12,14 +12,14 @@ get_header();
         <div class="col s-col1 force-col"></div>
         <div class="col s-col23 border-bottom border-left border-right
           ">
-          <h2>Search by Meal:</h2>
+          <h2><?php echo __('[:es]Buscar por ...[:en]Search by ...'); ?></h2>
           Taxonomy name tbc here.
         </div>
       </div>
       <div class="row">
         <div class="col s-col1 force-col"></div>
         <div class="col s-col23 border-left">
-          <h2>Search by Ingredient:</h2>
+          <h2><?php echo __('[:es]Buscar por ingrediente:[:en]Search by Ingredient:'); ?></h2>
           <ul class="u-inline-list">
           <?php
           $taxonomies = array(

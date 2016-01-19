@@ -37,14 +37,14 @@ if( have_posts() ) {
               <?php the_post_thumbnail(); ?>
             </div>
             <div class="col s-col6 border-right">
-              <h3>Ingredients</h3>
+              <h3><?php echo __('[:es]Ingredientes:[:en]Ingredients'); ?></h3>
               <ol>
               <?php
                   // If theres ingredients
                   if (!empty($ingredients)) {
                     foreach ($ingredients[0] as $ingredient_text) {
                       // Check ingredient text against ingredient tags
-                      foreach($ingredients_tags as $ingredient_tag) { 
+                      foreach($ingredients_tags as $ingredient_tag) {
                         $ingredient_name = $ingredient_tag->name;
                         // Find tag in ingredient text
                         if( strpos($ingredient_text, $ingredient_name) !== false) {
