@@ -62,7 +62,7 @@
         </div>
         <div class="col s-col20 background-green border-left">
           <ul class="u-inline-list">
-            <li><a href="<?php echo home_url('about-us/'); ?>"><?php _ex('About Us', 'menu item', 'igv_pichon'); ?></a></li>
+            <li><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
             <li><a href="<?php echo home_url('journal/'); ?>"><?php _ex('Journal', 'menu item', 'igv_pichon'); ?></a></li>
             <li><a href="<?php echo home_url('recipes/'); ?>"><?php _ex('Recipes', 'menu item', 'igv_pichon'); ?></a></li>
             <li><a href="<?php echo home_url('catering/'); ?>"><?php _ex('Catering', 'menu item', 'igv_pichon'); ?></a></li>
