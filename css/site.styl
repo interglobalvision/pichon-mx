@@ -8,10 +8,9 @@ meyer-reset()
 box-sizing-reset()
 normalize()
 
-// GRID OF 12 90px COLUMNS WITH 16px GUTTER
 $cols = 20
-$col = 40px
-$gutter = 12px
+$col = 14px
+$gutter = 10px
 .container
   margin: 0 auto
   width: ($col * $cols)+($gutter * $cols)
@@ -26,41 +25,55 @@ $gutter = 12px
   min-height: 1px
 
 for col in 1..$cols
-  .s{col}
+  .col-{col}
     width: ( col * $col ) + ( ( col - 1 ) * $gutter )
 
-@media screen and (min-width: 601px)
+@media screen and (min-width: 656px)
+
+  $col = 20px
+  $gutter = 12px
+  .container
+    margin: 0 auto
+    width: ($col * $cols)+($gutter * $cols)
+  .row
+    clear: both
+    margin-bottom: 30px
+  .col
+    float: left
+    margin-left: ($gutter/2)
+    margin-right: ($gutter/2)
 
   for col in 1..$cols
-    .m{col}
+    .col-{col}
       width: ( col * $col ) + ( ( col - 1 ) * $gutter )
 
 @media screen and (min-width: 993px)
 
+  $col = 35px
+  $gutter = 12px
+  .container
+    margin: 0 auto
+    width: ($col * $cols)+($gutter * $cols)
+  .row
+    clear: both
+    margin-bottom: 30px
+  .col
+    float: left
+    margin-left: ($gutter/2)
+    margin-right: ($gutter/2)
+
   for col in 1..$cols
-    .l{col}
+    .col-{col}
       width: ( col * $col ) + ( ( col - 1 ) * $gutter )
 
-// FLUID COLS
-.percent-col
-  float: left
-  box-sizing: content-box
-$pcols = 10
-for pcol in 1..$pcols
-  .s-into-{pcol}
-    width: ( 100% / pcol )
+@media screen and (max-width: 500px)
 
-@media screen and (min-width: 601px)
+  .container
+    width: 95%
 
-  for pcol in 1..$pcols
-    .m-into-{pcol}
-      width: ( 100% / pcol )
-
-@media screen and (min-width: 993px)
-
-  for pcol in 1..$pcols
-    .l-into-{pcol}
-      width: ( 100% / pcol )
+  .col
+    width: 100%
+    margin: 0
 
 // VARIABLES
 
@@ -144,18 +157,10 @@ img
 
 // MEDIA QUERIES
 
-@media screen and (max-width: ($col * $cols)+($gutter * $cols))
-  html
-    width: 100%
-
 
 // Medium grid break for tablet
-@media screen and (max-width: 993px)
-  html
-    width: 100%
+//@media screen and (max-width: 993px)
+
 
 // Small grid break for mobile
-@media screen and (max-width: 601px)
-
-  .container
-    width: 98%
+//@media screen and (max-width: 656px)
