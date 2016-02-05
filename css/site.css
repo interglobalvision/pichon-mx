@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Ume UI Gothic O5';
+  src: url("fonts/subset-Ume-UI-Gothic-O5.eot");
+  src: url("fonts/subset-Ume-UI-Gothic-O5.eot?#iefix") format('embedded-opentype'), url("fonts/subset-Ume-UI-Gothic-O5.woff2") format('woff2'), url("fonts/subset-Ume-UI-Gothic-O5.woff") format('woff'), url("fonts/subset-Ume-UI-Gothic-O5.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ume P Mincho Regular';
+  src: url("fonts/ume-p-mincho-webfont.eot");
+  src: url("fonts/ume-p-mincho-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/ume-p-mincho-webfont.woff2") format('woff2'), url("fonts/ume-p-mincho-webfont.woff") format('woff'), url("fonts/ume-p-mincho-webfont.ttf") format('truetype'), url("fonts/ume-p-mincho-webfont.svg#ume_p_minchoregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .u-hidden {
   display: none !important;
   visibility: hidden;
@@ -1201,19 +1215,36 @@ th {
   min-height: 1px;
 }
 body {
-  font-family: helvetica, arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.35em;
+  font-family: 'Ume P Mincho Regular', serif;
+  font-size: 19px;
+  line-height: 1.45em;
   letter-spacing: 0.001em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Ume UI Gothic O5', helvetica, sans-serif;
+  margin: 0;
 }
 h1 {
   font-size: 3em;
+  line-height: 1.45em;
 }
 h2 {
   font-size: 2em;
+  line-height: 1.45em;
 }
 h3 {
   font-size: 1.5em;
+  line-height: 1.45em;
 }
 p {
   margin-bottom: 1em;
