@@ -3,12 +3,12 @@
         <div class="row u-align-center">
           <div class="col s-col8">
             <ul>
-              <li><a href="<?php echo home_url('about-us/'); ?>">About Us</a></li>
-              <li><a href="<?php echo home_url('journal/'); ?>">Journal</a></li>
-              <li><a href="<?php echo home_url('recipes/'); ?>">Recipes</a></li>
-              <li><a href="<?php echo home_url('catering/'); ?>">Catering</a></li>
-              <li><a href="<?php echo home_url('friends/'); ?>">Friends</a></li>
-              <li><a href="<?php echo home_url('press/'); ?>">Press</a></li>
+            <li><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
+            <li><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
+            <li><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
+            <li><a href="<?php echo home_url('catering/'); ?>"><?php echo __('[:es]Catering[:en]Catering'); ?></a></a></li>
+            <li><a href="<?php echo home_url('friends/'); ?>"><?php echo __('[:es]Amigos[:en]Friends'); ?></a></a></li>
+            <li><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></a></li>
             </ul>
           </div>
 
@@ -23,7 +23,7 @@
           <div class="col s-col8">
             <ul>
               <li>Pichón.mx</li>
-              <li>copyright <?php echo date('Y'); ?>
+              <li><?php echo __('[:es]derechos reservados[:en]copyright'); ?> <?php echo date('Y'); ?>
             </ul>
           </div>
         </div>

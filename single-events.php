@@ -41,13 +41,13 @@ if( have_posts() ) {
             <?php
               if (!empty($meta['_igv_date'][0])) {
             ?>
-              <h4>When: <?php echo $meta['_igv_date'][0]; ?></h4>
+              <h4><?php echo __('[:es]Cuando:[:en]When:'); ?> <?php echo $meta['_igv_date'][0]; ?></h4>
             <?php
               }
 
               if (!empty($meta['_igv_location'][0])) {
             ?>
-              <h4>Where:
+              <h4><?php echo __('[:es]Donde:[:en]Where:'); ?>:
             <?php
               if (!empty($meta['_igv_location_link'][0])) {
                 echo '<a href="' . $meta['_igv_location_link'][0] . '" target="_blank">';
@@ -63,7 +63,7 @@ if( have_posts() ) {
               if (!empty($meta['_igv_ticket_link'][0])) {
                 echo '<a href="' . $meta['_igv_location_link'][0] . '" target="_blank">';
             ?>
-                <button>Book Tickets</button>
+                <button><?php echo __('[:es]Comprar boletos[:en]Book Tickets'); ?></button>
               </a>
             <?php
               }
@@ -80,7 +80,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-    <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="u-alert"><?php echo __('[:es]Lo siento, no posts matched your criteria[:en]Sorry, no posts matched your criteria'); ?></article>
 <?php
 } ?>
 
