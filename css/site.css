@@ -1292,6 +1292,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+#footer {
+  padding-top: 70px;
+  padding-bottom: 49px;
+  color: #fff;
+}
 @media screen and (max-width: 1296px) {
   html {
     width: 100%;
