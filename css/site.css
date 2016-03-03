@@ -1312,6 +1312,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.arrow {
+  font-size: 1.7rem;
+}
 #header .logo {
   width: 100%;
   height: auto;
@@ -1332,6 +1335,21 @@ img {
 #qtranslate-chooser {
   padding-left: 28px;
   font-size: 0.9rem;
+}
+.index-post-title {
+  padding: 28px;
+}
+.size-index-post-thumb {
+  display: block;
+}
+.pagination-block {
+  height: 5rem;
+}
+#footer {
+  padding-top: 70px;
+  padding-bottom: 49px;
+  color: #fff;
+  line-height: 1.6em;
 }
 #single-journal-title {
   padding: 28px;

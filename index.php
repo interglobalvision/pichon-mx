@@ -23,11 +23,11 @@ if( have_posts() ) {
               echo '<div class="col s-col1 force-col"></div>';
             }
           ?>
-          <div class="col s-col10 border-left">
-            <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+          <div class="col s-col10 border-left flex-center">
+            <a href="<?php the_permalink() ?>"><h2 class="index-post-title"><?php the_title(); ?></h2></a>
           </div>
-          <div class="col s-col10 border-left">
-            <?php the_post_thumbnail(); ?>
+          <div class="col s-col10 border-left border-right">
+            <?php the_post_thumbnail('index-post-thumb'); ?>
           </div>
         </article>
       </div>
