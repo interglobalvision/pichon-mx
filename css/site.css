@@ -1312,6 +1312,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.arrow {
+  font-size: 1.7rem;
+}
 #header .logo {
   width: 100%;
   height: auto;
@@ -1338,6 +1341,9 @@ img {
 }
 .size-index-post-thumb {
   display: block;
+}
+.pagination-block {
+  height: 5rem;
 }
 @media screen and (max-width: 1296px) {
   html {
