@@ -9,27 +9,29 @@ if (get_next_posts_link() || get_previous_posts_link()) {
   <nav id="pagination" class="border-bottom">
     <div class="container">
       <div class="row">
-        <?php
-          if ($previous) {
-        ?>
+  <?php
+    if ($previous) {
+  ?>
         <div class="col s-col7 pagination-block fonts-sans border-right force-col background-yellow flex-center">
-          <?php echo $previous; ?>
+    <?php echo $previous; ?>
         </div>
         <div class="col s-col10 force-col"></div>
-        <?php
-          } else {
-        ?>
+  <?php
+    } else {
+  ?>
         <div class="col s-col17 force-col"></div>
-        <?php
-          }
-        ?>
+  <?php
+    }
+  ?>
+    <?php
+      if ($next) {
+    ?>
         <div class="col s-col7 pagination-block font-sans border-left force-col background-blue flex-center">
-          <?php
-            if ($next) {
-              echo $next;
-            }
-          ?>
+          <?php echo $next; ?>
         </div>
+    <?php
+      }
+    ?>
       </div>
     </div>
   </nav>
