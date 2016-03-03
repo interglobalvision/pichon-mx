@@ -19,7 +19,7 @@ if( have_posts() ) {
         <div class="container">
           <div class="row">
             <div class="col s-col24 border-left">
-              <h2><?php the_title(); ?></h2>
+              <h2 id="single-journal-title"><?php the_title(); ?></h2>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@ if( have_posts() ) {
           <div class="row">
             <div class="col s-col2 force-col"></div>
             <div class="col s-col22 border-left border-right">
-              <?php the_post_thumbnail(); ?>
+              <?php the_post_thumbnail('single-journal-featured'); ?>
             </div>
           </div>
         </div>
@@ -41,7 +41,9 @@ if( have_posts() ) {
           <div class="row">
             <div class="col s-col4 force-col"></div>
             <div class="col s-col14 border-left border-right">
-              <?php the_content(); ?>
+              <div class="copy">
+                <?php the_content(); ?>
+              </div>
             </div>
           </div>
         </div>

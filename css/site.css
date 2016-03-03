@@ -1250,7 +1250,7 @@ h3 {
   line-height: 1.45em;
 }
 p {
-  margin-bottom: 1em;
+  margin: 0;
 }
 .background-green {
   background-color: #4bb064;
@@ -1332,6 +1332,21 @@ img {
 #qtranslate-chooser {
   padding-left: 28px;
   font-size: 0.9rem;
+}
+#single-journal-title {
+  padding: 28px;
+}
+.size-single-journal-featured {
+  display: block;
+}
+.copy {
+  padding: 28px;
+}
+.copy p {
+  text-indent: 40px;
+}
+.copy p:first-child {
+  text-indent: 0;
 }
 @media screen and (max-width: 1296px) {
   html {
