@@ -116,7 +116,7 @@ h3
   line-height: $font-leading-basic
 
 p
-  margin-bottom: 1em
+  margin: 0
 
 
 // BACKGROUNDS
@@ -218,6 +218,21 @@ img
   padding-bottom: $margin-mid
   color: white
   line-height: $font-leading-wide
+
+// SINGLE JOURNAL
+
+#single-journal-title
+  padding: $margin-basic
+
+.size-single-journal-featured
+  display: block
+
+.copy
+  padding: $margin-basic
+  p
+    text-indent: ( 1 * $col ) + ( ( 1 - 1 ) * $gutter )
+    &:first-child
+      text-indent: 0
 
 // MEDIA QUERIES
 
