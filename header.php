@@ -58,16 +58,16 @@
     <header id="header" class="container">
       <div class="row">
         <div class="col s-col4">
-        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+          <a href="<?php echo home_url(); ?>"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/pichon-logo.svg'); ?></a>
         </div>
-        <div class="col s-col20 background-green border-left">
-          <ul class="u-inline-list">
-            <li><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
-            <li><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
-            <li><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
-            <li><a href="<?php echo home_url('catering/'); ?>"><?php echo __('[:es]Catering[:en]Catering'); ?></a></a></li>
-            <li><a href="<?php echo home_url('friends/'); ?>"><?php echo __('[:es]Amigos[:en]Friends'); ?></a></a></li>
-            <li><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></a></li>
+        <div id="menu" class="col s-col20 background-green border-left u-align-center font-sans flex-center">
+          <ul>
+            <li class="menu-item"><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
+            <li class="menu-item"><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
+            <li class="menu-item"><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
+            <li class="menu-item"><a href="<?php echo home_url('catering/'); ?>"><?php echo __('[:es]Catering[:en]Catering'); ?></a></a></li>
+            <li class="menu-item"><a href="<?php echo home_url('friends/'); ?>"><?php echo __('[:es]Amigos[:en]Friends'); ?></a></a></li>
+            <li class="menu-item"><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></a></li>
           </ul>
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
