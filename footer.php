@@ -1,4 +1,4 @@
-    <footer id="footer" class="background-green">
+    <footer id="footer" class="background-green font-sans">
       <div class="container">
         <div class="row u-align-center">
           <div class="col s-col8">
@@ -23,7 +23,8 @@
           <div class="col s-col8">
             <ul>
               <li>Pichón.mx</li>
-              <li><?php echo __('[:es]derechos reservados[:en]copyright'); ?> <?php echo date('Y'); ?>
+              <li><?php echo __('[:es]derechos reservados[:en]copyright'); ?></li>
+              <li><?php echo date('Y'); ?></li>
             </ul>
           </div>
         </div>

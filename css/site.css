@@ -1333,6 +1333,12 @@ img {
   padding-left: 28px;
   font-size: 0.9rem;
 }
+#footer {
+  padding-top: 70px;
+  padding-bottom: 49px;
+  color: #fff;
+  line-height: 1.6em;
+}
 @media screen and (max-width: 1296px) {
   html {
     width: 100%;
