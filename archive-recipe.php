@@ -10,15 +10,14 @@ get_header();
     <div class="container">
       <div class="row">
         <div class="col s-col1 force-col"></div>
-        <div class="col s-col23 border-bottom border-left border-right
-          ">
+        <div class="col s-col23 padding-basic border-bottom border-left border-right">
           <h2><?php echo __('[:es]Buscar por ...[:en]Search by ...'); ?></h2>
           Taxonomy name tbc here.
         </div>
       </div>
       <div class="row">
         <div class="col s-col1 force-col"></div>
-        <div class="col s-col23 border-left">
+        <div class="col s-col23 padding-basic border-left">
           <h2><?php echo __('[:es]Buscar por ingrediente:[:en]Search by Ingredient:'); ?></h2>
           <ul class="u-inline-list">
           <?php
@@ -32,9 +31,7 @@ get_header();
           if ($ingredients) {
             foreach ($ingredients  as $ingredient) {
           ?>
-            <li><a href="<?php echo get_term_link( $ingredient ); ?>">
-              <?php echo $ingredient->name; ?>
-            </a></li>
+            <li class="taxonomy-ingredient"><a href="<?php echo get_term_link( $ingredient ); ?>"><?php echo $ingredient->name; ?></a></li>
           <?php
             }
           }
@@ -66,10 +63,10 @@ if (have_posts()) {
             }
           ?>
           <div class="col s-col10 border-left">
-            <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+            <a href="<?php the_permalink() ?>"><h2 class="padding-basic"><?php the_title(); ?></h2></a>
           </div>
           <div class="col s-col10 border-left">
-            <?php the_post_thumbnail(); ?>
+            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('index-post-thumb'); ?></a>
           </div>
         </article>
       </div>

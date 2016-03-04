@@ -115,8 +115,32 @@ h3
   font-size: 1.5rem
   line-height: $font-leading-basic
 
+.rotated-heading
+  text-align: center
+  transform: rotate(-4deg)
+
+h3.rotated-heading
+  padding: $margin-small
+
 p
   margin: 0
+
+.copy
+  padding: $margin-basic
+  p
+    text-indent: ( 1 * $col ) + ( ( 1 - 1 ) * $gutter )
+    &:first-child
+      text-indent: 0
+
+ol
+  counter-reset: ordered-list-counter
+  li
+    margin-bottom: $margin-small
+    &:before
+      content: counter(ordered-list-counter)
+      counter-increment: ordered-list-counter
+      font-family: 'Ume UI Gothic O5', helvetica, sans-serif
+      padding-right: $margin-small
 
 
 // BACKGROUNDS
@@ -146,6 +170,12 @@ p
   border-bottom: $border-width solid $color-black-soft
 
 
+// PADDING
+
+.padding-basic
+  padding: $margin-basic
+
+
 // ALLIGNMENT
 
 .flex-center
@@ -153,14 +183,12 @@ p
   align-items: center
   justify-content: center
 
+
 // LINKS
 
 a, a:active, a:visited
   color: inherit
   text-decoration: none
-  transition:opacity .2s
-  &:hover
-    opacity:.5
 
 
 // BASIC
@@ -200,15 +228,34 @@ img
 
 // INDEX
 
-.index-post-title
-  padding: $margin-basic
-
 .size-index-post-thumb
   display: block
 
 .pagination-block
   height: 5rem
 
+// RECIPE INDEX
+
+.taxonomy-ingredient
+  text-transform: capitalize
+  &:after
+    content: ', '
+  &:last-child:after
+    content: ''
+
+// SINGLE JOURNAL
+
+.size-single-journal-featured
+  display: block
+
+
+// SINGLE RECIPE
+
+#single-recipe-ingredients-heading
+  margin-top: $margin-basic
+
+.size-single-recipe-featured
+  display: block
 
 
 // FOOTER
@@ -218,21 +265,6 @@ img
   padding-bottom: $margin-mid
   color: white
   line-height: $font-leading-wide
-
-// SINGLE JOURNAL
-
-#single-journal-title
-  padding: $margin-basic
-
-.size-single-journal-featured
-  display: block
-
-.copy
-  padding: $margin-basic
-  p
-    text-indent: ( 1 * $col ) + ( ( 1 - 1 ) * $gutter )
-    &:first-child
-      text-indent: 0
 
 // MEDIA QUERIES
 
