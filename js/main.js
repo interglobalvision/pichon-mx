@@ -25,6 +25,8 @@ var Layout = {
       var $children = $(item).children();
       var maxHeight = 0;
 
+      $children.css('height', 'auto');
+
       $children.each(function() {
         var height = $(this).height();
 
