@@ -23,7 +23,7 @@ if( have_posts() ) {
         <div class="container">
           <div class="row">
             <div class="col s-col24 border-left">
-              <h2><?php the_title(); ?></h2>
+              <h2 class="padding-basic "><?php the_title(); ?></h2>
             </div>
           </div>
         </div>
@@ -34,11 +34,11 @@ if( have_posts() ) {
           <div class="row">
             <div class="col s-col2 force-col"></div>
             <div class="col s-col14 border-left border-right">
-              <?php the_post_thumbnail(); ?>
+              <?php the_post_thumbnail('single-recipe-featured'); ?>
             </div>
             <div class="col s-col6 border-right">
-              <h3><?php echo __('[:es]Ingredientes:[:en]Ingredients'); ?></h3>
-              <ol>
+              <h3 id="single-recipe-ingredients-heading" class="rotated-heading"><?php echo __('[:es]Ingredientes:[:en]Ingredients'); ?></h3>
+              <ul id="single-recipe-ingredients" class="padding-basic">
               <?php
                   // If theres ingredients
                   if (!empty($ingredients)) {
@@ -57,7 +57,7 @@ if( have_posts() ) {
                     }
                   }
               ?>
-              </ol>
+              </ul>
             </div>
           </div>
         </div>
@@ -68,7 +68,9 @@ if( have_posts() ) {
           <div class="row">
             <div class="col s-col4 force-col"></div>
             <div class="col s-col14 border-left border-right">
-              <?php the_content(); ?>
+              <div class="copy">
+                <?php the_content(); ?>
+              </div>
             </div>
           </div>
         </div>

@@ -24,10 +24,10 @@ if( have_posts() ) {
             }
           ?>
           <div class="col s-col10 border-left flex-center">
-            <a href="<?php the_permalink() ?>"><h2 class="index-post-title"><?php the_title(); ?></h2></a>
+            <a href="<?php the_permalink() ?>"><h2 class="padding-basic"><?php the_title(); ?></h2></a>
           </div>
           <div class="col s-col10 border-left border-right">
-            <?php the_post_thumbnail('index-post-thumb'); ?>
+            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('index-post-thumb'); ?></a>
           </div>
         </article>
       </div>

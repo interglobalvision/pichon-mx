@@ -19,7 +19,7 @@ if( have_posts() ) {
         <div class="container">
           <div class="row">
             <div class="col s-col24 border-left">
-              <h2 id="single-journal-title"><?php the_title(); ?></h2>
+              <h2 class="padding-basic"><?php the_title(); ?></h2>
             </div>
           </div>
         </div>
