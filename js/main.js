@@ -44,6 +44,8 @@ var Layout = {
 jQuery(document).ready(function () {
   'use strict';
 
-  Layout.init();
+});
 
+$(window).on("load", function() {
+  Layout.init();
 });
