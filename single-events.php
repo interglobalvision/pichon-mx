@@ -23,7 +23,7 @@ if( have_posts() ) {
           <div class="row">
             <div class="col s-col2 force-col"></div>
             <div class="col s-col22 border-left border-right">
-              <?php the_post_thumbnail(); ?>
+              <?php the_post_thumbnail('col22'); ?>
             </div>
           </div>
         </div>

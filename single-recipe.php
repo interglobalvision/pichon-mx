@@ -34,7 +34,7 @@ if( have_posts() ) {
           <div class="row">
             <div class="col s-col2 force-col"></div>
             <div class="col s-col14 border-left border-right">
-              <?php the_post_thumbnail('single-recipe-featured'); ?>
+              <?php the_post_thumbnail('col14'); ?>
             </div>
             <div class="col s-col6 border-right">
               <h3 id="single-recipe-ingredients-heading" class="rotated-heading"><?php echo __('[:es]Ingredientes:[:en]Ingredients'); ?></h3>
