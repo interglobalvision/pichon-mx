@@ -1335,6 +1335,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+.attachment-col22,
+.attachment-col14,
+.attachment-col14-5to4,
+.attachment-col10,
+.attachment-col10-5to4 {
+  display: block;
+}
 .arrow {
   font-size: 1.7rem;
 }
@@ -1359,9 +1366,6 @@ img {
   padding-left: 28px;
   font-size: 0.9rem;
 }
-.size-index-post-thumb {
-  display: block;
-}
 .pagination-block {
   height: 5rem;
 }
@@ -1374,14 +1378,8 @@ img {
 .taxonomy-ingredient:last-child:after {
   content: '';
 }
-.size-single-journal-featured {
-  display: block;
-}
 #single-recipe-ingredients-heading {
   margin-top: 28px;
-}
-.size-single-recipe-featured {
-  display: block;
 }
 #footer {
   padding-top: 70px;
