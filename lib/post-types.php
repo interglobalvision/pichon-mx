@@ -265,7 +265,7 @@ function people_post_type() {
 		'label'                 => 'People',
 		'description'           => 'Staff',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'page-attributes', ),
+		'supports'              => array( 'title', 'editor', 'page-attributes', 'thumbnail' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
