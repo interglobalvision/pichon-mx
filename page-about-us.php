@@ -49,6 +49,7 @@ if( have_posts() ) {
                 </div>
                <?php
                   }
+                  wp_reset_postdata();
                 }
 
               ?>
