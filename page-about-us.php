@@ -18,7 +18,7 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="row">
-            <div class="col s-col2 force-col"></div>
+            <div class="col s-col1 force-col"></div>
             <div class="col s-col22 border-left border-right">
               <?php the_post_thumbnail(); ?>
             </div>

@@ -1365,6 +1365,9 @@ img {
 .pagination-block {
   height: 5rem;
 }
+.about-person {
+  margin-bottom: 28px;
+}
 .taxonomy-ingredient {
   text-transform: capitalize;
 }
