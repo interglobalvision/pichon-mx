@@ -27,7 +27,7 @@ if( have_posts() ) {
             <a href="<?php the_permalink() ?>"><h2 class="padding-basic"><?php the_title(); ?></h2></a>
           </div>
           <div class="col s-col10 border-left border-right">
-            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('index-post-thumb'); ?></a>
+            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('col10-5to4'); ?></a>
           </div>
         </article>
       </div>

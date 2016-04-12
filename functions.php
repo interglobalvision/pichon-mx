@@ -28,7 +28,13 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'admin-thumb', 150, 150, false );
   add_image_size( 'opengraph', 1200, 630, true );
 
-  add_image_size( 'name', 199, 299, true );
+  add_image_size( 'col22', 1174, 99999, false );
+
+  add_image_size( 'col14', 736, 99999, false );
+  add_image_size( 'col14-5to4', 736, 588, true );
+
+  add_image_size( 'col10', 520, 99999, false );
+  add_image_size( 'col10-5to4', 520, 416, true );
 
   add_image_size( 'col8', 418, 9999, false );
 }
