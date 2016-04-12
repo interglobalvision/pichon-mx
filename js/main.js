@@ -28,7 +28,7 @@ var Layout = {
       $children.css('height', 'auto');
 
       $children.each(function() {
-        var height = $(this).height();
+        var height = $(this).innerHeight();
 
         if (height > maxHeight){
           maxHeight = height;
