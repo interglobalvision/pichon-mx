@@ -41,6 +41,23 @@ var Layout = {
   },
 };
 
+var Slideshow = {
+  slideshow: undefined,
+  init: function() {
+    var _this = this;
+
+    _this.slideshow = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: 1700,
+      effect: 'fade',
+      onClick: function(swiper) {
+        swiper.slideNext();
+      }
+    });
+
+  },
+};
+
 jQuery(document).ready(function () {
   'use strict';
 
@@ -48,4 +65,5 @@ jQuery(document).ready(function () {
 
 $(window).imagesLoaded( function() {
   Layout.init();
+  Slideshow.init();
 });
