@@ -57,6 +57,18 @@ function cmb_initialize_cmb_meta_boxes() {
     require_once 'lib/CMB2/init.php';
 }
 
+add_action( 'init', 'init_moment_php', 9999 );
+function init_moment_php() {
+  if ( ! class_exists( 'Moment' ) )
+    require_once 'lib/moment-php/src/Moment.php';
+    require_once 'lib/moment-php/src/MomentException.php';
+    require_once 'lib/moment-php/src/MomentFromVo.php';
+    require_once 'lib/moment-php/src/MomentHelper.php';
+    require_once 'lib/moment-php/src/MomentLocale.php';
+    require_once 'lib/moment-php/src/MomentPeriodVo.php';
+    require_once 'lib/moment-php/src/FormatsInterface.php';
+}
+
 // Remove WP Emoji
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
