@@ -36,6 +36,8 @@ if( function_exists( 'add_image_size' ) ) {
 
   add_image_size( 'col10', 520, 99999, false );
   add_image_size( 'col10-5to4', 520, 416, true );
+
+  add_image_size( 'col8', 418, 9999, false );
 }
 
 // Register Nav Menus
