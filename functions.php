@@ -29,6 +29,7 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'opengraph', 1200, 630, true );
 
   add_image_size( 'col22', 1174, 99999, false );
+  add_image_size( 'col22-5to4', 1174, 939, true );
 
   add_image_size( 'col14', 736, 99999, false );
   add_image_size( 'col14-5to4', 736, 588, true );
@@ -57,6 +58,18 @@ function cmb_initialize_cmb_meta_boxes() {
   // Add CMB2 plugin
   if( ! class_exists( 'cmb2_bootstrap_202' ) )
     require_once 'lib/CMB2/init.php';
+}
+
+add_action( 'init', 'init_moment_php', 9999 );
+function init_moment_php() {
+  if ( ! class_exists( 'Moment' ) )
+    require_once 'lib/moment-php/src/Moment.php';
+    require_once 'lib/moment-php/src/MomentException.php';
+    require_once 'lib/moment-php/src/MomentFromVo.php';
+    require_once 'lib/moment-php/src/MomentHelper.php';
+    require_once 'lib/moment-php/src/MomentLocale.php';
+    require_once 'lib/moment-php/src/MomentPeriodVo.php';
+    require_once 'lib/moment-php/src/FormatsInterface.php';
 }
 
 // Remove WP Emoji

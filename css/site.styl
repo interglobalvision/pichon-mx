@@ -5,6 +5,8 @@
 @import "helpers"
 @import "genericons"
 
+@import "swiper"
+
 meyer-reset()
 box-sizing-reset()
 normalize()
@@ -96,6 +98,12 @@ body
 .font-sans
   font-family: 'Ume UI Gothic O5', helvetica, sans-serif
 
+.font-serif
+  font-family: 'Ume P Mincho Regular', serif
+
+.font-capitalize
+  text-transform: capitalize
+
 h1, h2, h3, h4, h5, h6
   margin: 0
 
@@ -175,6 +183,9 @@ ol
 .padding-basic
   padding: $margin-basic
 
+.padding-small
+  padding: $margin-small
+
 
 // ALLIGNMENT
 
@@ -183,6 +194,8 @@ ol
   align-items: center
   justify-content: center
 
+.flex-left-align
+  justify-content: flex-start
 
 // LINKS
 
@@ -205,10 +218,12 @@ img
 // BLOCK FEATURED IMAGES
 
 .attachment-col22,
+.attachment-col22-5to4,
 .attachment-col14,
 .attachment-col14-5to4,
 .attachment-col10,
-.attachment-col10-5to4
+.attachment-col10-5to4,
+.swiper-img
   display: block
 
 // ARROWS
