@@ -60,6 +60,24 @@ function igv_cmb_metaboxes() {
         'repeatable'      => true,
     ) );
 
+	 // PAGE
+
+	 $page_metabox = new_cmb2_box( array(
+        'id'            => 'page_metabox',
+        'title'         => __( 'Page Metabox', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+    ) );
+
+    $page_metabox->add_field( array(
+        'name'       => __( 'Sidebar', 'cmb2' ),
+        'desc'       => __( 'optional sidebar content', 'cmb2' ),
+        'id'         => $prefix . 'sidebar',
+        'type'       => 'wysiwyg',
+    ) );
+
     // EVENT
 
 	 $event_metabox = new_cmb2_box( array(
