@@ -34,13 +34,13 @@ if( have_posts() ) {
             <nav class="padding-small">
             <?php
               if (!empty($meta['_igv_website_link'][0])) {
-                echo '<a href="' . $meta['_igv_website_link'][0] . '" target="_blank"><span class="genericon genericon-external"></span></a>';
+                echo '<a href="' . $meta['_igv_website_link'][0] . '" target="_blank"><span class="genericon genericon-external"></span></a> ';
               }
               if (!empty($meta['_igv_email'][0])) {
-                echo '<a href="mailto:' . $meta['_igv_email'][0] . '" target="_blank"><span class="genericon genericon-mail"></span></a>';
+                echo '<a href="mailto:' . $meta['_igv_email'][0] . '" target="_blank"><span class="genericon genericon-mail"></span></a> ';
               }
               if (!empty($meta['_igv_phone'][0])) {
-                echo '<a href="tel:' . $meta['_igv_phone'][0] . '" target="_blank"><span class="genericon genericon-phone"></span></a>';
+                echo '<a href="tel:' . $meta['_igv_phone'][0] . '" target="_blank"><span class="genericon genericon-phone"></span></a> ';
               }
             ?>
             </nav>
