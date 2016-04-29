@@ -1741,7 +1741,7 @@ th {
 body {
   font-family: 'Ume P Mincho Regular', serif;
   font-size: 19px;
-  line-height: 1.45em;
+  line-height: 1.45;
   letter-spacing: 0.005em;
 }
 .font-sans {
@@ -1752,6 +1752,12 @@ body {
 }
 .font-capitalize {
   text-transform: capitalize;
+}
+.font-uppercase {
+  text-transform: uppercase;
+}
+.font-leading-wide {
+  line-height: 1.6;
 }
 h1,
 h2,
@@ -1769,15 +1775,15 @@ h3 {
 }
 h1 {
   font-size: 3rem;
-  line-height: 1.45em;
+  line-height: 1.45;
 }
 h2 {
   font-size: 2rem;
-  line-height: 1.45em;
+  line-height: 1.45;
 }
 h3 {
   font-size: 1.5rem;
-  line-height: 1.45em;
+  line-height: 1.45;
 }
 .rotated-heading {
   text-align: center;
@@ -1798,6 +1804,13 @@ p {
 }
 .copy p:first-child {
   text-indent: 0;
+}
+.copy ul {
+  margin: 28px;
+}
+.copy ul li {
+  list-style: circle;
+  list-style-position: inside;
 }
 ol {
   counter-reset: ordered-list-counter;
@@ -1926,11 +1939,24 @@ img {
 #single-recipe-ingredients-heading {
   margin-top: 28px;
 }
+#single-event-title {
+  padding: 28px 28px 0 28px;
+}
+#button-tickets {
+  width: 100%;
+  background-color: #4bb064;
+  color: #fdfdfd;
+  padding: 28px;
+  border: 0;
+}
+#button-tickets:focus {
+  outline: 0;
+}
 #footer {
   padding-top: 70px;
   padding-bottom: 49px;
   color: #fff;
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 @media screen and (max-width: 1296px) {
   html {

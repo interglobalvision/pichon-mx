@@ -74,8 +74,8 @@ $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
 
 $font-size-basic = 19px
-$font-leading-basic = 1.45em
-$font-leading-wide = 1.6em
+$font-leading-basic = 1.45
+$font-leading-wide = 1.6
 $font-tracking-basic = 0.005em
 
 $color-black-soft = rgb(14, 14, 14)
@@ -103,6 +103,12 @@ body
 
 .font-capitalize
   text-transform: capitalize
+
+.font-uppercase
+  text-transform: uppercase
+
+.font-leading-wide
+  line-height: $font-leading-wide
 
 h1, h2, h3, h4, h5, h6
   margin: 0
@@ -139,6 +145,11 @@ p
     text-indent: ( 1 * $col ) + ( ( 1 - 1 ) * $gutter )
     &:first-child
       text-indent: 0
+  ul
+    margin: $margin-basic
+    li
+      list-style: circle
+      list-style-position: inside
 
 ol
   counter-reset: ordered-list-counter
@@ -282,6 +293,21 @@ img
 
 #single-recipe-ingredients-heading
   margin-top: $margin-basic
+
+
+// SINGLE EVENT
+
+#single-event-title
+  padding: $margin-basic $margin-basic 0 $margin-basic
+
+#button-tickets
+  width: 100%
+  background-color: $color-green
+  color: $color-white-soft
+  padding: $margin-basic
+  border: 0
+  &:focus
+    outline: 0
 
 
 // FOOTER
