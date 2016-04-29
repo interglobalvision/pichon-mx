@@ -37,7 +37,7 @@ if( have_posts() ) {
             <div class="col s-col8 border-left">
               <div class="copy">
               <?php if (!empty($meta['_igv_sidebar'])) {
-                echo $meta['_igv_sidebar'][0];
+                echo apply_filters('the_content', $meta['_igv_sidebar'][0]);
               }
               ?>
               </div>
