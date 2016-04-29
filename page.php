@@ -30,10 +30,17 @@ if( have_posts() ) {
         <div class="container">
           <div class="row">
             <div class="col s-col16 border-left">
-              <?php the_content(); ?>
+              <div class="copy">
+                <?php the_content(); ?>
+              </div>
             </div>
             <div class="col s-col8 border-left">
-              side column to be customized for different pages
+              <div class="copy">
+              <?php if (!empty($meta['_igv_sidebar'])) {
+                echo apply_filters('the_content', $meta['_igv_sidebar'][0]);
+              }
+              ?>
+              </div>
             </div>
           </div>
         </div>

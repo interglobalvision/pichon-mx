@@ -20,7 +20,7 @@ if( have_posts() ) {
           <div class="row">
             <div class="col s-col1 force-col"></div>
             <div class="col s-col22 border-left border-right">
-              <?php the_post_thumbnail(); ?>
+              <?php the_post_thumbnail('col22'); ?>
             </div>
           </div>
         </div>
@@ -30,7 +30,9 @@ if( have_posts() ) {
         <div class="container">
           <div class="row">
             <div class="col s-col16 border-left">
-              <?php the_content(); ?>
+              <div class="copy">
+                <?php the_content(); ?>
+              </div>
             </div>
             <div class="col s-col8 border-left padding-basic">
               <?php

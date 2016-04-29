@@ -224,7 +224,7 @@ function friend_post_type() {
 		'has_archive'           => 'friends',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+		'capability_type'       => 'post',
 	);
 	register_post_type( 'friend', $args );
 
