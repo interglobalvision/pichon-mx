@@ -78,7 +78,7 @@ if( have_posts() ) {
               </div>
             <?php
               if (!empty($meta['_igv_ticket_link'][0])) {
-                echo '<a href="' . $meta['_igv_location_link'][0] . '" target="_blank">';
+                echo '<a href="' . $meta['_igv_ticket_link'][0] . '" target="_blank">';
             ?>
                 <div class="border-top border-bottom font-sans font-uppercase">
                   <button id="button-tickets"><?php echo __('[:es]Comprar boletos[:en]Book Tickets'); ?></button>
