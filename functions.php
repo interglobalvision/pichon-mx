@@ -31,6 +31,8 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'col22', 1174, 99999, false );
   add_image_size( 'col22-5to4', 1174, 939, true );
 
+  add_image_size( 'col20', 1060, 99999, false );
+
   add_image_size( 'col14', 736, 99999, false );
   add_image_size( 'col14-5to4', 736, 588, true );
 
