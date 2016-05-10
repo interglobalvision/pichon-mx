@@ -22,7 +22,7 @@ var Site = {
     });
 
     $(window).imagesLoaded( function() {
-      _this.Layout.resize();
+      _this.Layout.equalizeRowHeights();
       _this.Slideshow.init();
     });
 
