@@ -25,7 +25,11 @@ if( have_posts() ) {
 ?>
     <div class="border-bottom">
       <div class="container">
-        <a href="<?php echo $href; ?>" target="_blank">
+    <?php
+    if ( ! empty( $href ) ) {
+      echo '<a href="' . $href . '" target="_blank">';
+    }
+    ?>
           <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
             <?php
               if ($i % 2 === 0) {
@@ -46,7 +50,11 @@ if( have_posts() ) {
               </div>
             </div>
           </article>
-        </a>
+    <?php
+    if ( ! empty( $href ) ) {
+      echo '</a>';
+    }
+    ?>
       </div>
     </div>
 
