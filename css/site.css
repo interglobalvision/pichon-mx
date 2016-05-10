@@ -1900,9 +1900,15 @@ img {
 .arrow {
   font-size: 1.7rem;
 }
-#header .logo {
-  width: 100%;
-  height: auto;
+#logo {
+  width: 180px;
+  height: 80px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  position: relative;
+  left: 0px;
+  -webkit-transition: left 300ms;
+  transition: left 300ms;
 }
 #menu {
   color: #fff;

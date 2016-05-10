@@ -87,6 +87,9 @@ $color-blue = rgb(76, 114, 158)
 
 $border-width = 3px
 
+$basic-animation-speed = 600ms
+$fast-animation-speed = $basic-animation-speed / 2
+
 // TYPOGRAPHY
 
 body
@@ -245,10 +248,14 @@ img
 
 // HEADER
 
-#header
-  .logo
-    width: 100%
-    height: auto
+#logo
+  width: 180px
+  height: 80px
+  padding-top: $margin-tiny
+  padding-bottom: $margin-tiny
+  position: relative
+  left: 0px
+  transition: left $fast-animation-speed
 
 #menu
   color: white
