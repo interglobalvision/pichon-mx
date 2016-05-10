@@ -1758,6 +1758,9 @@ body {
 .font-leading-wide {
   line-height: 1.6;
 }
+.font-pull-quote {
+  font-size: 2.3rem;
+}
 h1,
 h2,
 h3,

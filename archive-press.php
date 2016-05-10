@@ -42,7 +42,7 @@ if( have_posts() ) {
             </div>
             <div class="col s-col14 border-left border-right">
               <div class="padding-small font-pull-quote">
-                <?php the_content(); ?>
+                <?php echo '&#8220;' . $post->post_content . '&#8221;'; ?>
               </div>
             </div>
           </article>
