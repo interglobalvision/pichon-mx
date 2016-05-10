@@ -11,8 +11,25 @@ get_header();
       <div class="row">
         <div class="col s-col1 force-col"></div>
         <div class="col s-col23 padding-basic border-bottom border-left border-right">
-          <h2><?php echo __('[:es]Buscar por ...[:en]Search by ...'); ?></h2>
-          Taxonomy name tbc here.
+          <h2><?php echo __('[:es]Buscar por Categoría:[:en]Search by Category:'); ?></h2>
+          <ul class="u-inline-list">
+          <?php
+          $taxonomies = array(
+            'recipe_category',
+          );
+          $args = array(
+            'orderby' => 'none',
+          );
+          $categories = get_terms($taxonomies, $args);
+          if ($categories) {
+            foreach ($categories  as $category) {
+          ?>
+            <li class="taxonomy-recipe-category"><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></li>
+          <?php
+            }
+          }
+          ?>
+          </ul>
         </div>
       </div>
       <div class="row">
