@@ -132,6 +132,13 @@ function igv_cmb_metaboxes() {
     ) );
 
     $press_metabox->add_field( array(
+        'name'       => __( 'External link', 'cmb2' ),
+        'desc'       => __( '(optional)', 'cmb2' ),
+        'id'         => $prefix . 'link',
+        'type'       => 'text',
+    ) );
+
+    $press_metabox->add_field( array(
         'name'       => __( 'Download PDF/file', 'cmb2' ),
         'desc'       => __( '(optional)', 'cmb2' ),
         'id'         => $prefix . 'file',
