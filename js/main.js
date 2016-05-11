@@ -1,20 +1,50 @@
 /* jshint browser: true, devel: true, indent: 2, curly: true, eqeqeq: true, futurehostile: true, latedef: true, undef: true, unused: true */
-/* global $, jQuery, document, Modernizr */
+/* global $, document, Modernizr, Swiper */
 
-var Layout = {
+var Site = {
   init: function() {
     var _this = this;
 
-    _this.equalizeRowHeights();
+    _this.bind();
 
+    _this.Layout.init();
   },
 
   bind: function() {
     var _this = this;
 
-    $(window).resize(function() {
-    _this.equalizeRowHeights();
+    $(document).ready(function () {
+
     });
+
+    $(window).resize(function() {
+      _this.Layout.resize();
+    });
+
+    $(window).imagesLoaded( function() {
+      _this.Layout.equalizeRowHeights();
+      _this.Slideshow.init();
+    });
+
+  },
+
+};
+
+Site.Layout = {
+  $logo: $('#logo'),
+  $logoHolder: $('#logo-holder'),
+
+  init: function() {
+    var _this = this;
+
+    _this.layoutLogo();
+  },
+
+  resize: function() {
+    var _this = this;
+
+    _this.equalizeRowHeights();
+    _this.layoutLogo();
 
   },
 
@@ -39,9 +69,24 @@ var Layout = {
 
     });
   },
+
+  layoutLogo: function() {
+    var _this = this;
+
+    var offset = _this.$logoHolder.offset();
+    var holderWidth = _this.$logoHolder.outerWidth();
+    var logoWidth = _this.$logo.outerWidth();
+    var totalWidth = offset.left + holderWidth;
+    var logoOffset = (totalWidth / 2) - (logoWidth / 2) - offset.left;
+
+    _this.$logo.css({
+      'left': logoOffset + 'px',
+    });
+
+  },
 };
 
-var Slideshow = {
+Site.Slideshow = {
   slideshow: undefined,
   init: function() {
     var _this = this;
@@ -52,18 +97,10 @@ var Slideshow = {
       effect: 'fade',
       onClick: function(swiper) {
         swiper.slideNext();
-      }
+      },
     });
 
   },
 };
 
-jQuery(document).ready(function () {
-  'use strict';
-
-});
-
-$(window).imagesLoaded( function() {
-  Layout.init();
-  Slideshow.init();
-});
+Site.init();
