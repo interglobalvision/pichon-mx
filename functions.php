@@ -174,13 +174,29 @@ function get_active_slug() {
     $active_slug = $queried_object->rewrite['slug'];
   } else if (is_single()) {
     $active_slug = $queried_object->post_type;
+  } else if (is_tax()) {
+    $active_slug = $queried_object->taxonomy;
   }
 
   return $active_slug;
 }
 
-function menu_active($slug, $active_slug, $classes) {
-  if ($slug === $active_slug) {
+// echo classes for menu items
+function menu_active($slugs, $active_slug, $classes) {
+
+  $is_active = false;
+
+  if (is_array($slugs)) {
+    foreach ($slugs as $slug) {
+      if ($slug === $active_slug) {
+        $is_active = true;
+      }
+    }
+  } else if ($slugs === $active_slug) {
+    $is_active = true;
+  }
+
+  if ($is_active) {
     echo 'class="' . $classes . ' active"';
   } else {
     echo 'class="' . $classes . '"';
