@@ -11,23 +11,23 @@ get_header();
       <div class="row">
         <div class="col s-col1 force-col"></div>
         <div class="col s-col23 padding-basic border-bottom border-left border-right">
-          <h2><?php echo __('[:es]Buscar por Categoría:[:en]Search by Category:'); ?></h2>
-          <ul class="u-inline-list">
+          <h2><?php echo __('[:es]Buscar por Categoría[:en]Search by Category'); ?> :</h2>
+          <ul class="u-inline-list font-larger">
           <?php
-          $taxonomies = array(
-            'recipe_category',
-          );
-          $args = array(
-            'orderby' => 'none',
-          );
-          $categories = get_terms($taxonomies, $args);
-          if ($categories) {
-            foreach ($categories  as $category) {
-          ?>
-            <li class="taxonomy-recipe-category"><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></li>
-          <?php
+            $taxonomies = array(
+              'recipe_category',
+            );
+            $args = array(
+              'orderby' => 'none',
+            );
+            $categories = get_terms($taxonomies, $args);
+            if ($categories) {
+              foreach ($categories  as $category) {
+            ?>
+              <li class="taxonomy-recipe-category"><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></li>
+            <?php
+              }
             }
-          }
           ?>
           </ul>
         </div>
@@ -35,23 +35,23 @@ get_header();
       <div class="row">
         <div class="col s-col1 force-col"></div>
         <div class="col s-col23 padding-basic border-left">
-          <h2><?php echo __('[:es]Buscar por ingrediente:[:en]Search by Ingredient:'); ?></h2>
-          <ul class="u-inline-list">
+          <h2><?php echo __('[:es]Buscar por ingrediente[:en]Search by Ingredient'); ?> :</h2>
+          <ul class="u-inline-list font-larger">
           <?php
-          $taxonomies = array(
-            'ingredient',
-          );
-          $args = array(
-            'orderby' => 'none',
-          );
-          $ingredients = get_terms($taxonomies, $args);
-          if ($ingredients) {
-            foreach ($ingredients  as $ingredient) {
-          ?>
-            <li class="taxonomy-ingredient"><a href="<?php echo get_term_link( $ingredient ); ?>"><?php echo $ingredient->name; ?></a></li>
-          <?php
+            $taxonomies = array(
+              'ingredient',
+            );
+            $args = array(
+              'orderby' => 'none',
+            );
+            $ingredients = get_terms($taxonomies, $args);
+            if ($ingredients) {
+              foreach ($ingredients  as $ingredient) {
+            ?>
+              <li class="taxonomy-ingredient"><a href="<?php echo get_term_link( $ingredient ); ?>"><?php echo $ingredient->name; ?></a></li>
+            <?php
+              }
             }
-          }
           ?>
           </ul>
         </div>
@@ -79,10 +79,10 @@ if (have_posts()) {
               echo '<div class="col s-col1 force-col"></div>';
             }
           ?>
-          <div class="col s-col10 border-left">
+          <div class="col s-col10 border-left flex-center">
             <a href="<?php the_permalink() ?>"><h2 class="padding-basic"><?php the_title(); ?></h2></a>
           </div>
-          <div class="col s-col10 border-left">
+          <div class="col s-col10 border-left border-right flex-center">
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('col10-5to4'); ?></a>
           </div>
         </article>

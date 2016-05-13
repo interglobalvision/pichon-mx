@@ -74,8 +74,11 @@ $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
 
 $font-size-basic = 19px
+$font-size-larger = 1.5rem
+
 $font-leading-basic = 1.45
 $font-leading-wide = 1.6
+
 $font-tracking-basic = 0.005em
 
 $color-black-soft = rgb(14, 14, 14)
@@ -116,6 +119,9 @@ body
 .font-pull-quote
   font-size: 2.3rem
 
+.font-larger
+  font-size: $font-size-larger
+
 h1, h2, h3, h4, h5, h6
   margin: 0
 
@@ -132,7 +138,7 @@ h2
   line-height: $font-leading-basic
 
 h3
-  font-size: 1.5rem
+  font-size: $font-size-larger
   line-height: $font-leading-basic
 
 .rotated-heading
