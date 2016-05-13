@@ -1922,6 +1922,9 @@ img {
 #menu li {
   display: inline-block;
 }
+#menu li.active a {
+  border-bottom: 2px solid #fff;
+}
 .menu-item {
   padding: 0 14px;
   font-size: 1.5rem;
