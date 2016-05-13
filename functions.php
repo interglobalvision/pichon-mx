@@ -161,4 +161,30 @@ function pr($var) {
   echo '</pre>';
 }
 
+// CUSTOM FUNCTIONS
+
+// get slug of active template/page for menu actives
+function get_active_slug() {
+  $active_slug = null;
+  $queried_object = get_queried_object();
+
+  if ( is_page() || is_home() ) {
+    $active_slug = $queried_object->post_name;
+  } else if (is_post_type_archive()) {
+    $active_slug = $queried_object->rewrite['slug'];
+  } else if (is_single()) {
+    $active_slug = $queried_object->post_type;
+  }
+
+  return $active_slug;
+}
+
+function menu_active($slug, $active_slug, $classes) {
+  if ($slug === $active_slug) {
+    echo 'class="' . $classes . ' active"';
+  } else {
+    echo 'class="' . $classes . '"';
+  }
+}
+
 ?>
