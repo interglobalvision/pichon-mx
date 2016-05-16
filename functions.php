@@ -161,4 +161,46 @@ function pr($var) {
   echo '</pre>';
 }
 
+// CUSTOM FUNCTIONS
+
+// get slug of active template/page for menu actives
+function get_active_slug() {
+  $active_slug = null;
+  $queried_object = get_queried_object();
+
+  if ( is_page() || is_home() ) {
+    $active_slug = $queried_object->post_name;
+  } else if (is_post_type_archive()) {
+    $active_slug = $queried_object->rewrite['slug'];
+  } else if (is_single()) {
+    $active_slug = $queried_object->post_type;
+  } else if (is_tax()) {
+    $active_slug = $queried_object->taxonomy;
+  }
+
+  return $active_slug;
+}
+
+// echo classes for menu items
+function menu_active($slugs, $active_slug, $classes) {
+
+  $is_active = false;
+
+  if (is_array($slugs)) {
+    foreach ($slugs as $slug) {
+      if ($slug === $active_slug) {
+        $is_active = true;
+      }
+    }
+  } else if ($slugs === $active_slug) {
+    $is_active = true;
+  }
+
+  if ($is_active) {
+    echo 'class="' . $classes . ' active"';
+  } else {
+    echo 'class="' . $classes . '"';
+  }
+}
+
 ?>
