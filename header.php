@@ -62,12 +62,13 @@
         </div>
         <div id="menu" class="col s-col20 background-green border-left u-align-center font-sans flex-center">
           <ul>
-            <li class="menu-item"><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
-            <li class="menu-item"><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
-            <li class="menu-item"><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
-            <li class="menu-item"><a href="<?php echo home_url('catering/'); ?>"><?php echo __('[:es]Catering[:en]Catering'); ?></a></a></li>
-            <li class="menu-item"><a href="<?php echo home_url('friends/'); ?>"><?php echo __('[:es]Amigos[:en]Friends'); ?></a></a></li>
-            <li class="menu-item"><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></a></li>
+            <?php $active_slug = get_active_slug(); ?>
+            <li <?php menu_active('about-us', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
+            <li <?php menu_active(array('journal', 'post'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
+            <li <?php menu_active(array('recipe', 'ingredient', 'recipe_category'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
+            <li <?php menu_active('catering', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('catering/'); ?>"><?php echo __('[:es]Catering[:en]Catering'); ?></a></a></li>
+            <li <?php menu_active('friend', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('friends/'); ?>"><?php echo __('[:es]Amigos[:en]Friends'); ?></a></a></li>
+            <li <?php menu_active('press', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></a></li>
           </ul>
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
