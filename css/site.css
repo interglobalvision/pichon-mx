@@ -1761,6 +1761,9 @@ body {
 .font-pull-quote {
   font-size: 2.3rem;
 }
+.font-larger {
+  font-size: 1.5rem;
+}
 h1,
 h2,
 h3,
