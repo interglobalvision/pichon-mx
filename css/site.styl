@@ -288,8 +288,32 @@ img
 
 // INDEX
 
+#pagination
+  overflow: hidden
+
 .pagination-block
   height: 5rem
+  position: relative
+
+#pagination-previous:after
+  content: ''
+  background-color: $color-yellow
+  position: absolute
+  width: 2000px
+  height: 100%
+  top: 0px
+  right: 0
+  z-index: -1
+
+#pagination-next:after
+  content: ''
+  background-color: $color-blue
+  position: absolute
+  width: 2000px
+  height: 100%
+  top: 0px
+  left: 0
+  z-index: -1
 
 // PAGE
 

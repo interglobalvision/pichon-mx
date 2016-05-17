@@ -1939,8 +1939,32 @@ img {
   padding-left: 28px;
   font-size: 0.9rem;
 }
+#pagination {
+  overflow: hidden;
+}
 .pagination-block {
   height: 5rem;
+  position: relative;
+}
+#pagination-previous:after {
+  content: '';
+  background-color: #ffde4f;
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  top: 0px;
+  right: 0;
+  z-index: -1;
+}
+#pagination-next:after {
+  content: '';
+  background-color: #4c729e;
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: -1;
 }
 .about-person {
   margin-bottom: 28px;

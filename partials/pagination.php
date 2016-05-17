@@ -12,7 +12,7 @@ if (get_next_posts_link() || get_previous_posts_link()) {
   <?php
     if ($previous) {
   ?>
-        <div class="col s-col7 pagination-block fonts-sans border-right force-col background-yellow flex-center">
+        <div id="pagination-previous" class="col s-col7 pagination-block fonts-sans border-right force-col background-yellow flex-center padding-basic">
     <?php echo $previous; ?>
         </div>
         <div class="col s-col10 force-col"></div>
@@ -26,7 +26,7 @@ if (get_next_posts_link() || get_previous_posts_link()) {
     <?php
       if ($next) {
     ?>
-        <div class="col s-col7 pagination-block font-sans border-left force-col background-blue flex-center">
+        <div id="pagination-next" class="col s-col7 pagination-block font-sans border-left force-col background-blue flex-center padding-basic">
           <?php echo $next; ?>
         </div>
     <?php
