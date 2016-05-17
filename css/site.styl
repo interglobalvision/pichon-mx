@@ -237,6 +237,9 @@ img
   max-width: 100%
   height: auto
 
+.u-overflow-hidden
+  overflow: hidden
+
 
 // BLOCK FEATURED IMAGES
 
@@ -267,6 +270,7 @@ img
   transition: left $fast-animation-speed
 
 #menu
+  position: relative
   color: white
   ul
     display: inline-block
@@ -277,6 +281,15 @@ img
     &.active
       a
         border-bottom: 2px solid white
+  :after
+    content: ''
+    background-color: $color-green
+    position: absolute
+    width: 2000px
+    height: 100%
+    top: 0px
+    left: 0
+    z-index: -1
 
 .menu-item
   padding: 0 $margin-small
@@ -287,9 +300,6 @@ img
   font-size: .9rem
 
 // INDEX
-
-#pagination
-  overflow: hidden
 
 .pagination-block
   height: 5rem

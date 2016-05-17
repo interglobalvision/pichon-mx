@@ -6,7 +6,7 @@ if (get_next_posts_link() || get_previous_posts_link()) {
 
 ?>
   <!-- post pagination -->
-  <nav id="pagination" class="border-bottom">
+  <nav id="pagination" class="border-bottom u-overflow-hidden">
     <div class="container">
       <div class="row">
   <?php
