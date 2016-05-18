@@ -1,4 +1,4 @@
-    <footer id="footer" class="background-green font-sans">
+    <footer id="footer" class="background-keycolor font-sans">
       <div class="container">
         <div class="row u-align-center">
           <div class="col s-col8">
