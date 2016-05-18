@@ -176,14 +176,16 @@ ol
 
 // BACKGROUNDS
 
-.background-green
+.background-keycolor
   background-color: $color-green
 
-.background-yellow
-  background-color: $color-yellow
-
-.background-blue
-  background-color: $color-blue
+body
+  &.post-type-archive-recipe, &.single-recipe
+    .background-keycolor
+      background-color: $color-yellow
+  &.page-about-us
+    .background-keycolor
+      background-color: $color-blue
 
 
 // BORDERS
