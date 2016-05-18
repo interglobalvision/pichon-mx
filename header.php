@@ -62,7 +62,7 @@
         <div id="logo-holder" class="col s-col4">
           <a href="<?php echo home_url(); ?>"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/pichon-logo.svg'); ?></a>
         </div>
-        <div id="menu" class="col s-col20 background-green border-left u-align-center font-sans flex-center">
+        <div id="menu" class="col s-col20 background-keycolor border-left u-align-center font-sans flex-center">
           <ul>
             <?php $active_slug = get_active_slug(); ?>
             <li <?php menu_active('about-us', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>

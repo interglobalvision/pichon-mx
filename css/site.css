@@ -587,8 +587,10 @@ ul.u-inline-list li {
 .swiper-container-vertical > .swiper-wrapper {
   -webkit-box-orient: vertical;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -599,7 +601,9 @@ ul.u-inline-list li {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-transition-property: -webkit-transform;
@@ -617,6 +621,8 @@ ul.u-inline-list li {
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
   -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -629,6 +635,7 @@ ul.u-inline-list li {
 .swiper-slide {
   -webkit-flex-shrink: 0;
   -ms-flex: 0 0 auto;
+  -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -643,7 +650,9 @@ ul.u-inline-list li {
 .swiper-container-autoheight .swiper-wrapper {
   -webkit-box-align: start;
   -ms-flex-align: start;
+  -webkit-align-items: flex-start;
   -webkit-box-align: start;
+  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
   align-items: flex-start;
   -webkit-transition-property: -webkit-transform, height;
@@ -1820,13 +1829,17 @@ ol li:before {
   font-family: 'Ume UI Gothic O5', helvetica, sans-serif;
   padding-right: 14px;
 }
-.background-green {
+.background-keycolor {
   background-color: #4bb064;
 }
-.background-yellow {
+body.post-type-archive-recipe .background-keycolor,
+body.single-recipe .background-keycolor,
+body.post-type-archive-recipe #menu:after,
+body.single-recipe #menu:after {
   background-color: #ffde4f;
 }
-.background-blue {
+body.page-about-us .background-keycolor,
+body.page-about-us #menu:after {
   background-color: #4c729e;
 }
 .border-left {
@@ -1849,18 +1862,22 @@ ol li:before {
 }
 .flex-center {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
+  -webkit-justify-content: center;
   -ms-justify-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 .flex-left-align {
+  -webkit-justify-content: flex-start;
   -ms-justify-content: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -1931,7 +1948,7 @@ img {
 #menu li.active a {
   border-bottom: 2px solid #fff;
 }
-#menu :after {
+#menu:after {
   content: '';
   background-color: #4bb064;
   position: absolute;

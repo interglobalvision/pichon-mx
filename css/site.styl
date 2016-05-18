@@ -176,14 +176,18 @@ ol
 
 // BACKGROUNDS
 
-.background-green
+.background-keycolor
   background-color: $color-green
 
-.background-yellow
-  background-color: $color-yellow
-
-.background-blue
-  background-color: $color-blue
+body
+  &.post-type-archive-recipe, &.single-recipe
+    .background-keycolor,
+    #menu:after
+      background-color: $color-yellow
+  &.page-about-us
+    .background-keycolor,
+    #menu:after
+      background-color: $color-blue
 
 
 // BORDERS
@@ -290,7 +294,7 @@ img
     &.active
       a
         border-bottom: 2px solid white
-  :after
+  &:after
     content: ''
     background-color: $color-green
     position: absolute
