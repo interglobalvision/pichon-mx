@@ -24,6 +24,8 @@ var Site = {
     $(window).imagesLoaded( function() {
       _this.Layout.equalizeRowHeights();
       _this.Slideshow.init();
+
+      $('.loading-overlay').fadeOut();
     });
 
   },
@@ -68,6 +70,7 @@ Site.Layout = {
       $children.css('height', maxHeight);
 
     });
+
   },
 
   layoutLogo: function() {
