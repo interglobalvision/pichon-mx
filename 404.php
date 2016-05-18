@@ -9,8 +9,8 @@ get_header();
     <div class="container">
       <div class="row">
         <div class="col s-col2 force-col"></div>
-        <div class="col s-col16 border-left">
-          <h2>Not found</h2>
+        <div class="col s-col16 border-left padding-basic">
+          <h2><?php echo __('[:es]No Encontrado[:en]Not found'); ?></h2>
           <p>:(</p>
         </div>
       </div>
