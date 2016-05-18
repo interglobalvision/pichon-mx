@@ -181,10 +181,12 @@ ol
 
 body
   &.post-type-archive-recipe, &.single-recipe
-    .background-keycolor
+    .background-keycolor,
+    #menu:after
       background-color: $color-yellow
   &.page-about-us
-    .background-keycolor
+    .background-keycolor,
+    #menu:after
       background-color: $color-blue
 
 
@@ -283,7 +285,7 @@ img
     &.active
       a
         border-bottom: 2px solid white
-  :after
+  &:after
     content: ''
     background-color: $color-green
     position: absolute
