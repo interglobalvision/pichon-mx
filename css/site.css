@@ -1893,6 +1893,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.u-overflow-hidden {
+  overflow: hidden;
+}
 .attachment-col22,
 .attachment-col22-5to4,
 .attachment-col20,
@@ -1917,6 +1920,7 @@ img {
   transition: left 300ms;
 }
 #menu {
+  position: relative;
   color: #fff;
 }
 #menu ul {
@@ -1931,6 +1935,16 @@ img {
 #menu li.active a {
   border-bottom: 2px solid #fff;
 }
+#menu :after {
+  content: '';
+  background-color: #4bb064;
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+}
 .menu-item {
   padding: 0 14px;
   font-size: 1.5rem;
@@ -1941,6 +1955,27 @@ img {
 }
 .pagination-block {
   height: 5rem;
+  position: relative;
+}
+#pagination-previous:after {
+  content: '';
+  background-color: #ffde4f;
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  top: 0px;
+  right: 0;
+  z-index: -1;
+}
+#pagination-next:after {
+  content: '';
+  background-color: #4c729e;
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: -1;
 }
 .about-person {
   margin-bottom: 28px;

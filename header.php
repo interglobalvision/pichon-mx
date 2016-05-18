@@ -54,7 +54,7 @@
   <section id="main-container">
 
   <!-- start content -->
-  <div class="border-bottom">
+  <div class="border-bottom u-overflow-hidden">
     <header id="header" class="container">
       <div class="row">
         <div id="logo-holder" class="col s-col4">
