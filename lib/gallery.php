@@ -91,9 +91,9 @@ function my_gallery_shortcode($attr) {
 
 		$tag = '';
 
-		$img = wp_get_attachment_image_src($id, $size);
+		$img = wp_get_attachment_image($id, $size, false, array('class' => 'swiper-img'));
 
-		$output .= "<div class='swiper-slide'><img class='swiper-img' src='{$img[0]}'></div>";
+		$output .= "<div class='swiper-slide'>{$img}</div>";
 		}
 
 	$output .= "</div>\n</div>\n";
