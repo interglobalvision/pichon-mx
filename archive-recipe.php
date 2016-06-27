@@ -47,8 +47,17 @@ get_header();
             $ingredients = get_terms($taxonomies, $args);
             if ($ingredients) {
               foreach ($ingredients  as $ingredient) {
+                $ingredient_name_en = get_term_meta( $ingredient->term_id, '_igv_ingredient_name_en', true );
             ?>
-              <li class="taxonomy-ingredient"><a href="<?php echo get_term_link( $ingredient ); ?>"><?php echo $ingredient->name; ?></a></li>
+              <li class="taxonomy-ingredient"><a href="<?php echo get_term_link( $ingredient ); ?>">
+                <?php 
+                  if (qtranxf_getLanguage() == 'en' && $ingredient_name_en) {
+                    echo $ingredient_name_en;
+                  } else {
+                    echo $ingredient->name;
+                  }
+                ?>
+              </a></li>
             <?php
               }
             }
