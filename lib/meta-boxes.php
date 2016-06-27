@@ -52,12 +52,38 @@ function igv_cmb_metaboxes() {
         // 'closed'     => true, // Keep the metabox closed by default
     ) );
 
-    $recipe_metabox->add_field( array(
-        'name'       => __( 'Ingredients', 'cmb2' ),
-        'desc'       => __( '...', 'cmb2' ),
-        'id'         => $prefix . 'ingredients',
-        'type'       => 'text',
-        'repeatable'      => true,
+    $ingredient_group = $recipe_metabox->add_field( array(
+        'id'          => $prefix . 'ingredient_group',
+        'type'        => 'group',
+        'description' => __( 'Select ingredient from drop-down. Wrap ingredient **name** in text with double asterix to indicate what should be linked to the ingredient\'s archive.', 'cmb2' ),
+        'options'     => array(
+            'group_title'   => __( 'Ingredient {#}', 'cmb2' ), // {#} gets replaced by row number
+            'add_button'    => __( 'Add Another Ingredient', 'cmb2' ),
+            'remove_button' => __( 'Remove Ingredient', 'cmb2' ),
+            'sortable'      => true, // beta
+            // 'closed'     => true, // true to have the groups closed by default
+        ),
+    ) );
+
+    $recipe_metabox->add_group_field( $ingredient_group, array(
+        'name'             => __( 'Ingredient', 'cmb2' ),
+        'desc'             => __( '', 'cmb2' ),
+        'id'               => 'ingredient',
+        'type'             => 'select',
+        'show_option_none' => true,
+        'options'          => cmb2_get_term_options('ingredient'),
+    ) );
+
+    $recipe_metabox->add_group_field( $ingredient_group, array(
+        'name' => __( 'Español', 'cmb2' ),
+        'id'   => 'espanol',
+        'type' => 'text',
+    ) );
+
+    $recipe_metabox->add_group_field( $ingredient_group, array(
+        'name' => __( 'English', 'cmb2' ),
+        'id'   => 'english',
+        'type' => 'text',
     ) );
 
 	 // PAGE
@@ -176,6 +202,35 @@ function igv_cmb_metaboxes() {
         'desc'       => __( '(optional)', 'cmb2' ),
         'id'         => $prefix . 'phone',
         'type'       => 'text',
+    ) );
+
+}
+
+add_action( 'cmb2_admin_init', 'igv_cmb_taxonomy_metaboxes' );
+/**
+ * Hook in and add a metabox to add fields to taxonomy terms
+ */
+function igv_cmb_taxonomy_metaboxes() {
+
+    // Start with an underscore to hide fields from custom fields list
+    $prefix = '_igv_';
+
+    /**
+     * Metabox to add fields to categories and tags
+     */
+    $ingredient_metabox = new_cmb2_box( array(
+        'id'               => $prefix . 'ingredient_metabox',
+        'title'            => __( 'Ingredient Options', 'cmb2' ), // Doesn't output for term boxes
+        'object_types'     => array( 'term' ), // Tells CMB2 to use term_meta vs post_meta
+        'taxonomies'       => array( 'ingredient', ), // Tells CMB2 which taxonomies should have these fields
+        // 'new_term_section' => true, // Will display in the "Add New Category" section
+    ) );
+
+    $ingredient_metabox->add_field( array(
+        'name'     => __( 'English Name', 'cmb2' ),
+        'desc'     => __( 'optional', 'cmb2' ),
+        'id'       => $prefix . 'ingredient_name_en',
+        'type'     => 'text',
     ) );
 
 }
