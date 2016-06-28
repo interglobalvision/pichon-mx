@@ -75,14 +75,14 @@ function igv_cmb_metaboxes() {
     ) );
 
     $recipe_metabox->add_group_field( $ingredient_group, array(
-        'name' => __( 'Español', 'cmb2' ),
-        'id'   => 'espanol',
+        'name' => __( 'English', 'cmb2' ),
+        'id'   => 'english',
         'type' => 'text',
     ) );
 
     $recipe_metabox->add_group_field( $ingredient_group, array(
-        'name' => __( 'English', 'cmb2' ),
-        'id'   => 'english',
+        'name' => __( 'Español', 'cmb2' ),
+        'id'   => 'espanol',
         'type' => 'text',
     ) );
 
@@ -227,9 +227,9 @@ function igv_cmb_taxonomy_metaboxes() {
     ) );
 
     $ingredient_metabox->add_field( array(
-        'name'     => __( 'English Name', 'cmb2' ),
+        'name'     => __( 'Español', 'cmb2' ),
         'desc'     => __( 'optional', 'cmb2' ),
-        'id'       => $prefix . 'ingredient_name_en',
+        'id'       => $prefix . 'ingredient_name_es',
         'type'     => 'text',
     ) );
 
