@@ -7,9 +7,9 @@ get_header();
 <section id="main-content">
   <div class="border-bottom">
     <div class="container">
-      <div class="row">
-        <div class="col s-col2 force-col"></div>
-        <div class="col s-col16 border-left padding-basic">
+      <div class="grid-row">
+        <div class="grid-item item-m-2 only-mobile"></div>
+        <div class="grid-item item-s-24 item-m-16 border-left padding-basic">
           <h2><?php echo __('[:es]No Encontrado[:en]Not found'); ?></h2>
           <p>:(</p>
         </div>

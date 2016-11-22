@@ -14,15 +14,15 @@ if( have_posts() ) {
   while( have_posts() ) {
     the_post();
 
-    $ingredients_items = get_post_meta($post->ID, '_igv_ingredient_group');  
+    $ingredients_items = get_post_meta($post->ID, '_igv_ingredient_group');
 ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col24 border-left">
+          <div class="grid-row">
+            <div class="grid-item item-s-24 border-left">
               <h2 class="padding-basic "><?php the_title(); ?></h2>
             </div>
           </div>
@@ -31,12 +31,12 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col2 force-col"></div>
-            <div class="col s-col14 border-left border-right">
+          <div class="grid-row">
+            <div class="grid-item item-s-2"></div>
+            <div class="grid-item item-s-14 border-left border-right">
               <?php the_post_thumbnail('col14'); ?>
             </div>
-            <div class="col s-col6 border-right">
+            <div class="grid-item item-s-6 border-right">
               <h3 id="single-recipe-ingredients-heading" class="rotated-heading"><?php echo __('[:es]Ingredientes:[:en]Ingredients'); ?></h3>
               <ul id="single-recipe-ingredients" class="padding-basic">
               <?php
@@ -59,7 +59,7 @@ if( have_posts() ) {
                           $ingredient_link = get_term_link( intval( $ingredient_id ) );
 
                           $ingredient_split = explode( '**', $ingredient_text );
-                          
+
                           $ingredient_text = $ingredient_split[0] . '<a href="' . $ingredient_link . '">' . $ingredient_split[1] . '</a>' . $ingredient_split[2];
                         }
 
@@ -77,9 +77,9 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col4 force-col"></div>
-            <div class="col s-col14 border-left border-right">
+          <div class="grid-row">
+            <div class="grid-item item-s-4"></div>
+            <div class="grid-item item-s-14 border-left border-right">
               <div class="copy">
                 <?php the_content(); ?>
               </div>

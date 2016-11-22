@@ -30,13 +30,13 @@ if( have_posts() ) {
       echo '<a href="' . $href . '" target="_blank">';
     }
     ?>
-          <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
+          <article <?php post_class('grid-row'); ?> id="post-<?php the_ID(); ?>">
             <?php
               if ($i % 2 === 0) {
-                echo '<div class="col s-col1 force-col"></div>';
+                echo '<div class="grid-item item-s-1"></div>';
               }
             ?>
-            <div class="col s-col8 border-left">
+            <div class="grid-item item-s-8 border-left">
               <h2 class="padding-small"><?php the_title(); ?></h2>
               <?php
                 if (!empty($meta['_igv_link'][0])) {
@@ -44,7 +44,7 @@ if( have_posts() ) {
                 }
               ?>
             </div>
-            <div class="col s-col14 border-left border-right">
+            <div class="grid-item item-s-14 border-left border-right">
               <div class="padding-small font-pull-quote">
                 <?php echo '&#8220;' . $post->post_content . '&#8221;'; ?>
               </div>

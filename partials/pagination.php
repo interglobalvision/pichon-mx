@@ -8,25 +8,25 @@ if (get_next_posts_link() || get_previous_posts_link()) {
   <!-- post pagination -->
   <nav id="pagination" class="border-bottom u-overflow-hidden">
     <div class="container">
-      <div class="row">
+      <div class="grid-row">
   <?php
     if ($previous) {
   ?>
         <div id="pagination-previous" class="col s-col7 pagination-block font-sans border-right force-col background-yellow flex-center padding-basic">
     <?php echo $previous; ?>
         </div>
-        <div class="col s-col10 force-col"></div>
+        <div class="grid-item item-s-10"></div>
   <?php
     } else {
   ?>
-        <div class="col s-col17 force-col"></div>
+        <div class="grid-item item-s-17"></div>
   <?php
     }
   ?>
     <?php
       if ($next) {
     ?>
-        <div id="pagination-next" class="col s-col7 pagination-block font-sans border-left force-col background-blue flex-center padding-basic">
+        <div id="pagination-next" class="grid-item item-s-7 pagination-block font-sans border-left force-col background-blue flex-center padding-basic">
           <?php echo $next; ?>
         </div>
     <?php

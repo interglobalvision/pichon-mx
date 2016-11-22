@@ -17,16 +17,16 @@ if( have_posts() ) {
 ?>
     <div class="border-bottom">
       <div class="container">
-        <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
+        <article <?php post_class('grid-row'); ?> id="post-<?php the_ID(); ?>">
           <?php
             if ($i % 2 === 0) {
-              echo '<div class="col s-col1 force-col"></div>';
+              echo '<div class="grid-item item-s-1"></div>';
             }
           ?>
-          <div class="col s-col10 border-left flex-center">
+          <div class="grid-item item-s-10 border-left flex-center">
             <a href="<?php the_permalink() ?>"><h2 class="padding-basic"><?php the_title(); ?></h2></a>
           </div>
-          <div class="col s-col10 border-left border-right">
+          <div class="grid-item item-s-10 border-left border-right">
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('col10-5to4'); ?></a>
           </div>
         </article>
