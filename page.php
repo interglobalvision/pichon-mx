@@ -18,8 +18,7 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="grid-row">
-            <div class="grid-item item-s-2"></div>
-            <div class="grid-item item-s-22 border-left border-right">
+            <div class="grid-item item-s-22 offset-s-2 border-left border-right">
               <?php the_post_thumbnail('col22'); ?>
             </div>
           </div>
@@ -29,12 +28,12 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="grid-row">
-            <div class="grid-item item-s-16 border-left">
+            <div class="grid-item item-s-24 item-m-16 border-left">
               <div class="copy">
                 <?php the_content(); ?>
               </div>
             </div>
-            <div class="grid-item item-s-8 border-left">
+            <div class="grid-item item-s-24 item-m-8 border-left">
               <div class="copy">
               <?php if (!empty($meta['_igv_sidebar'])) {
                 echo apply_filters('the_content', $meta['_igv_sidebar'][0]);

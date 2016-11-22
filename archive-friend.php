@@ -21,10 +21,10 @@ if( have_posts() ) {
         <article <?php post_class('grid-row'); ?> id="post-<?php the_ID(); ?>">
           <?php
             if ($i % 2 === 0) {
-              echo '<div class="grid-item item-s-1 force-col"></div>';
+              echo '<div class="grid-item item-m-1 desktop-only"></div>';
             }
           ?>
-          <div class="grid-item item-s-10 border-left">
+          <div class="grid-item item-s-24 item-m-10 border-left">
             <h2 class="padding-small"><?php the_title(); ?></h2>
 
             <div class="padding-small">
@@ -46,7 +46,7 @@ if( have_posts() ) {
             </nav>
 
           </div>
-          <div class="grid-item item-s-10 border-left border-right">
+          <div class="grid-item item-s-24 item-m-10 border-left border-right">
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('col10-5to4'); ?></a>
           </div>
         </article>

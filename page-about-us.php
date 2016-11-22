@@ -18,8 +18,7 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="grid-row">
-            <div class="grid-item item-s-1"></div>
-            <div class="grid-item item-s-22 border-left border-right">
+            <div class="grid-item item-s-22 offset-s-2 border-left border-right">
               <?php the_post_thumbnail('col22'); ?>
             </div>
           </div>

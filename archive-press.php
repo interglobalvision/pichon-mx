@@ -33,10 +33,10 @@ if( have_posts() ) {
           <article <?php post_class('grid-row'); ?> id="post-<?php the_ID(); ?>">
             <?php
               if ($i % 2 === 0) {
-                echo '<div class="grid-item item-s-1"></div>';
+                echo '<div class="grid-item item-m-1 only-desktop"></div>';
               }
             ?>
-            <div class="grid-item item-s-8 border-left">
+            <div class="grid-item item-s-24 item-m-8 border-left">
               <h2 class="padding-small"><?php the_title(); ?></h2>
               <?php
                 if (!empty($meta['_igv_link'][0])) {
@@ -44,7 +44,7 @@ if( have_posts() ) {
                 }
               ?>
             </div>
-            <div class="grid-item item-s-14 border-left border-right">
+            <div class="grid-item item-s-22 offset-s-2 item-m-14 border-left border-right">
               <div class="padding-small font-pull-quote">
                 <?php echo '&#8220;' . $post->post_content . '&#8221;'; ?>
               </div>

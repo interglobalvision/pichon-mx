@@ -32,11 +32,10 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="grid-row">
-            <div class="grid-item item-s-2"></div>
-            <div class="grid-item item-s-14 border-left border-right">
+            <div class="grid-item item-s-22 offset-s-2 item-m-14 offset-m-2 border-left border-right">
               <?php the_post_thumbnail('col14'); ?>
             </div>
-            <div class="grid-item item-s-6 border-right">
+            <div class="grid-item item-s-24 item-m-6 border-right">
               <h3 id="single-recipe-ingredients-heading" class="rotated-heading"><?php echo __('[:es]Ingredientes:[:en]Ingredients'); ?></h3>
               <ul id="single-recipe-ingredients" class="padding-basic">
               <?php
@@ -78,8 +77,7 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="grid-row">
-            <div class="grid-item item-s-4"></div>
-            <div class="grid-item item-s-14 border-left border-right">
+            <div class="grid-item item-s-24 item-m-14 offset-m-4 border-left border-right">
               <div class="copy">
                 <?php the_content(); ?>
               </div>

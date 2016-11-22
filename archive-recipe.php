@@ -33,8 +33,7 @@ get_header();
         </div>
       </div>
       <div class="grid-row">
-        <div class="grid-item item-s-1 force-col"></div>
-        <div class="grid-item item-s-23 padding-basic border-left">
+        <div class="grid-item item-s-23 offset-s-1 padding-basic border-left">
           <h2><?php echo __('[:es]Buscar por ingrediente[:en]Search by Ingredient'); ?> :</h2>
           <ul class="u-inline-list font-larger">
           <?php
@@ -85,13 +84,13 @@ if (have_posts()) {
         <article <?php post_class('grid-row'); ?> id="post-<?php the_ID(); ?>">
           <?php
             if ($i % 2 === 0) {
-              echo '<div class="grid-item item-s-1"></div>';
+              echo '<div class="grid-item item-m-1 only-desktop"></div>';
             }
           ?>
-          <div class="grid-item item-s-10 border-left flex-center">
+          <div class="grid-item item-s-24 item-m-10 border-left flex-center">
             <a href="<?php the_permalink() ?>"><h2 class="padding-basic"><?php the_title(); ?></h2></a>
           </div>
-          <div class="grid-item item-s-10 border-left border-right flex-center">
+          <div class="grid-item item-s-24 item-m-10 border-left border-right flex-center">
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('col10-5to4'); ?></a>
           </div>
         </article>

@@ -39,8 +39,8 @@ if( have_posts() ) {
       <div class="border-bottom">
         <div class="container">
           <div class="grid-row">
-            <div class="grid-item item-s-4"></div>
-            <div class="grid-item item-s-14 border-left border-right">
+            <div class="grid-item item-s-4 only-desktop"></div>
+            <div class="grid-item item-s-24 item-m-14 border-left border-right">
               <div class="copy">
                 <?php the_content(); ?>
               </div>
