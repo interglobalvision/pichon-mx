@@ -30,9 +30,8 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col3 force-col"></div>
-            <div class="col s-col20 border-left border-right">
+          <div class="grid-row">
+            <div class="grid-item item-s-20 offset-s-3 border-left border-right">
               <?php the_post_thumbnail('col20'); ?>
             </div>
           </div>
@@ -41,14 +40,14 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col16 border-left">
+          <div class="grid-row">
+            <div class="grid-item item-s-24 item-m-16 border-left">
               <h2 id="single-event-title"><?php the_title(); ?></h2>
               <div class="copy">
                 <?php the_content(); ?>
               </div>
             </div>
-            <div class="col s-col8 border-left border-right">
+            <div class="grid-item item-s-24 item-m-8 border-left border-right">
               <div class="padding-basic font-leading-wide">
             <?php
               if (!empty($meta['_igv_date'][0])) {

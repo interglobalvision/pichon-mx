@@ -17,9 +17,8 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col2 force-col"></div>
-            <div class="col s-col22 border-left border-right">
+          <div class="grid-row">
+            <div class="grid-item item-s-22 offset-s-2 border-left border-right">
               <?php the_post_thumbnail('col22'); ?>
             </div>
           </div>
@@ -28,13 +27,13 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col16 border-left">
+          <div class="grid-row">
+            <div class="grid-item item-s-24 item-m-16 border-left">
               <div class="copy">
                 <?php the_content(); ?>
               </div>
             </div>
-            <div class="col s-col8 border-left">
+            <div class="grid-item item-s-24 item-m-8 border-left">
               <div class="copy">
               <?php if (!empty($meta['_igv_sidebar'])) {
                 echo apply_filters('the_content', $meta['_igv_sidebar'][0]);
@@ -53,7 +52,7 @@ if( have_posts() ) {
 } else {
 ?>
   <div class="row">
-    <article class="col s-col24 u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="grid-item item-s-24 u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
   </div>
 <?php
 } ?>

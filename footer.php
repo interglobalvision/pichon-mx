@@ -1,7 +1,7 @@
     <footer id="footer" class="background-keycolor font-sans">
       <div class="container">
-        <div class="row u-align-center">
-          <div class="col s-col8">
+        <div class="grid-row u-align-center">
+          <div class="grid-item item-s-8">
             <ul>
             <li><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
             <li><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
@@ -12,7 +12,7 @@
             </ul>
           </div>
 
-          <div class="col s-col8">
+          <div class="grid-item item-s-8">
             <ul>
               <li><a href="https://www.facebook.com/pichondf/" target="_blank">Facebook</a></li>
               <li><a href="https://twitter.com/Pichoooooon" target="_blank">Instagram</a></li>
@@ -20,7 +20,7 @@
             </ul>
           </div>
 
-          <div class="col s-col8">
+          <div class="grid-item item-s-8">
             <ul>
               <li>Pichón.mx</li>
               <li><?php echo __('[:es]derechos reservados[:en]copyright'); ?></li>

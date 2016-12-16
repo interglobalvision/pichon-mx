@@ -17,8 +17,8 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col24 border-left">
+          <div class="grid-row">
+            <div class="grid-item item-s-24 border-left">
               <h2 class="padding-basic"><?php the_title(); ?></h2>
             </div>
           </div>
@@ -27,9 +27,9 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col2 force-col"></div>
-            <div class="col s-col22 border-left border-right">
+          <div class="grid-row">
+            <div class="grid-item item-s-2"></div>
+            <div class="grid-item item-s-22 border-left border-right">
               <?php the_post_thumbnail('col22'); ?>
             </div>
           </div>
@@ -38,9 +38,9 @@ if( have_posts() ) {
 
       <div class="border-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col s-col4 force-col"></div>
-            <div class="col s-col14 border-left border-right">
+          <div class="grid-row">
+            <div class="grid-item item-s-4 only-desktop"></div>
+            <div class="grid-item item-s-24 item-m-14 border-left border-right">
               <div class="copy">
                 <?php the_content(); ?>
               </div>
@@ -56,7 +56,7 @@ if( have_posts() ) {
 } else {
 ?>
   <div class="row">
-    <article class="col s-col24 u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="grid-item item-s-24 u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
   </div>
 <?php
 } ?>

@@ -11,59 +11,13 @@ meyer-reset()
 box-sizing-reset()
 normalize()
 
-// GRID OF 12 90px COLUMNS WITH 16px GUTTER
-$cols = 24
-$col = 40px
-$gutter = 14px
-.container
-  margin: 0 auto
-  width: ($col * $cols)+($gutter * $cols)
-.row
-  clear: both
-.col
-  float: left
-  margin-left: ($gutter/2)
-  margin-right: ($gutter/2)
-for col in 1..$cols
-  .s-col{col}
-    width: ( col * $col ) + ( ( col - 1 ) * $gutter )
+@import "grid"
 
-@media screen and (min-width: 601px)
-
-  for col in 1..$cols
-    .m-col{col}
-      width: ( col * $col ) + ( ( col - 1 ) * $gutter )
-
-@media screen and (min-width: 993px)
-
-  for col in 1..$cols
-    .l-col{col}
-      width: ( col * $col ) + ( ( col - 1 ) * $gutter )
-
-// FLUID COLS
-.percent-col
-  float: left
-$pcols = 10
-for pcol in 1..$pcols
-  .s-into-{pcol}
-    width: ( 100% / pcol )
-
-@media screen and (min-width: 601px)
-
-  for pcol in 1..$pcols
-    .m-into-{pcol}
-      width: ( 100% / pcol )
-
-@media screen and (min-width: 993px)
-
-  for pcol in 1..$pcols
-    .l-into-{pcol}
-      width: ( 100% / pcol )
-
-.force-col
-  min-height: 1px
+// ***********************************************
 
 // VARIABLES
+
+$gutter = 14px
 
 $golden-ratio = 1.61803398875
 
@@ -92,6 +46,8 @@ $border-width = 3px
 
 $basic-animation-speed = 600ms
 $fast-animation-speed = $basic-animation-speed / 2
+
+// ***********************************************
 
 // TYPOGRAPHY
 
@@ -129,266 +85,48 @@ h1, h2, h3
   font-family: 'Ume UI Gothic O5', helvetica, sans-serif
   margin: 0
 
-h1
-  font-size: 3rem
-  line-height: $font-leading-basic
-
-h2
-  font-size: 2rem
-  line-height: $font-leading-basic
-
-h3
-  font-size: $font-size-larger
-  line-height: $font-leading-basic
-
-.rotated-heading
-  text-align: center
-  transform: rotate(-4deg)
-
-h3.rotated-heading
-  padding: $margin-small
-
-p
-  margin: 0
-
-.copy
-  padding: $margin-basic
-  p
-    text-indent: ( 1 * $col ) + ( ( 1 - 1 ) * $gutter )
-    &:first-child
-      text-indent: 0
-  ul
-    margin: $margin-basic
-    li
-      list-style: circle
-      list-style-position: inside
-
-ol
-  counter-reset: ordered-list-counter
-  li
-    margin-bottom: $margin-small
-    &:before
-      content: counter(ordered-list-counter)
-      counter-increment: ordered-list-counter
-      font-family: 'Ume UI Gothic O5', helvetica, sans-serif
-      padding-right: $margin-small
-
-
-// BACKGROUNDS
-
-.background-keycolor
-  background-color: $color-green
-
-body
-  &.post-type-archive-recipe, &.single-recipe
-    .background-keycolor,
-    #menu:after
-      background-color: $color-yellow
-  &.page-about-us
-    .background-keycolor,
-    #menu:after
-      background-color: $color-blue
-
-
-// BORDERS
-
-.border-left
-  border-left: $border-width solid $color-black-soft
-
-.border-right
-  border-right: $border-width solid $color-black-soft
-
-.border-top
-  border-top: $border-width solid $color-black-soft
-
-.border-bottom
-  border-bottom: $border-width solid $color-black-soft
-
-
-// PADDING
-
-.padding-basic
-  padding: $margin-basic
-
-.padding-small
-  padding: $margin-small
-
-
-// ALLIGNMENT
-
-.flex-center
-  display: flex
-  align-items: center
-  justify-content: center
-
-.flex-left-align
-  justify-content: flex-start
-
-// LINKS
-
-a, a:active, a:visited
-  color: inherit
-  text-decoration: none
-
-
-// BASIC
-
-html
-  background-color: $color-white-soft
-  color: $color-black-soft
-
-img
-  max-width: 100%
-  height: auto
-
-.u-overflow-hidden
-  overflow: hidden
-  
-.loading-overlay
-  position: fixed 
-  z-index: 9999
-  width: 100%
-  height: 100%
-  top: 0
-  left: 0
-  background-color: $color-white-soft 
-
-
-// BLOCK FEATURED IMAGES
-
-.attachment-col22,
-.attachment-col22-5to4,
-.attachment-col20,
-.attachment-col14,
-.attachment-col14-5to4,
-.attachment-col10,
-.attachment-col10-5to4,
-.swiper-img
-  display: block
-
-// ARROWS
-
-.arrow
-  font-size: 1.7rem
-
-// HEADER
-
-#logo
-  width: 180px
-  height: 80px
-  padding-top: $margin-tiny
-  padding-bottom: $margin-tiny
-  position: relative
-  left: 0px
-  transition: left $fast-animation-speed
-
-#menu
-  position: relative
-  color: white
-  ul
-    display: inline-block
-  li
-    display: inline-block
-    a
-      padding-bottom: 2px
-    &.active
-      a
-        border-bottom: 2px solid white
-  &:after
-    content: ''
-    background-color: $color-green
-    position: absolute
-    width: 2000px
-    height: 100%
-    top: 0px
-    left: 0
-    z-index: -1
-
-.menu-item
-  padding: 0 $margin-small
-  font-size: 1.5rem
-
-#qtranslate-chooser
-  padding-left: $margin-basic
-  font-size: .9rem
-
-// INDEX
-
-.pagination-block
-  height: 5rem
-  position: relative
-
-#pagination-previous:after
-  content: ''
-  background-color: $color-yellow
-  position: absolute
-  width: 2000px
-  height: 100%
-  top: 0px
-  right: 0
-  z-index: -1
-
-#pagination-next:after
-  content: ''
-  background-color: $color-blue
-  position: absolute
-  width: 2000px
-  height: 100%
-  top: 0px
-  left: 0
-  z-index: -1
-
-// PAGE
-
-  // ABOUT US
-
-.about-person
-  margin-bottom: $margin-basic
-
-// RECIPE INDEX
-
-.taxonomy-ingredient
-  text-transform: capitalize
-  &:after
-    content: ', '
-  &:last-child:after
-    content: ''
-
-// SINGLE JOURNAL
-
-
-
-// SINGLE RECIPE
-
-#single-recipe-ingredients-heading
-  margin-top: $margin-basic
-
-
-// SINGLE EVENT
-
-#single-event-title
-  padding: $margin-basic $margin-basic 0 $margin-basic
-
-#button-tickets
-  width: 100%
-  background-color: $color-green
-  color: $color-white-soft
-  padding: $margin-basic
-  border: 0
-  &:focus
-    outline: 0
-
-
-// FOOTER
-
-#footer
-  padding-top: $margin-large
-  padding-bottom: $margin-mid
-  color: white
-  line-height: $font-leading-wide
+// ***********************************************
 
 // MEDIA QUERIES
 
-@media screen and (max-width: ($col * $cols)+($gutter * $cols))
-  html
-    width: 100%
+grid(96%, $gutter, s)
+
+@import 'responsive/mobile'
+
+@media screen and (min-width: 720px)
+
+  $gutter = 21px
+
+  grid(680px, $gutter, m)
+
+  .mobile-only
+    display: none
+
+  @import 'responsive/tablet'
+
+@media screen and (min-width: 1024px)
+
+  $gutter = 24px
+
+  grid(1000px, $gutter, l)
+
+  .desktop-only
+    display: initial
+
+  @import 'responsive/desktop'
+
+@media screen and (min-width: 1280px)
+
+  grid(1200px)
+
+@media screen and (min-width: 1366px)
+
+  grid(1300px)
+
+@media screen and (min-width: 1680px)
+
+  grid(1600px)
+
+@media screen and (min-width: 1920px)
+
+  grid(1800px)
