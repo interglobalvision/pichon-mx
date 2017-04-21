@@ -178,13 +178,13 @@ function press_post_type() {
 }
 add_action( 'init', 'press_post_type', 0 );
 
-function friend_post_type() {
+function client_post_type() {
 
 	$labels = array(
-		'name'                  => 'Friends',
-		'singular_name'         => 'Friend',
-		'menu_name'             => 'Friends',
-		'name_admin_bar'        => 'Friends',
+		'name'                  => 'Clients',
+		'singular_name'         => 'Client',
+		'menu_name'             => 'Clients',
+		'name_admin_bar'        => 'Clients',
 		'archives'              => 'Item Archives',
 		'parent_item_colon'     => 'Parent Item:',
 		'all_items'             => 'All Items',
@@ -208,8 +208,8 @@ function friend_post_type() {
 		'filter_items_list'     => 'Filter items list',
 	);
 	$args = array(
-		'label'                 => 'Friend',
-		'description'           => 'Friend',
+		'label'                 => 'client',
+		'description'           => 'client',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', ),
 		'taxonomies'            => array( 'post_tag' ),
@@ -221,15 +221,15 @@ function friend_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'friends',
+		'has_archive'           => 'clients',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'friend', $args );
+	register_post_type( 'client', $args );
 
 }
-add_action( 'init', 'friend_post_type', 0 );
+add_action( 'init', 'client_post_type', 0 );
 
 // Register Custom Post Type
 function people_post_type() {
