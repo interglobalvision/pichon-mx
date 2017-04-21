@@ -60,7 +60,7 @@
     <header id="header" class="container">
       <div class="grid-row">
         <div id="logo-holder" class="grid-item item-s-4">
-          <a href="<?php echo home_url(); ?>"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/pichon-logo.svg'); ?></a>
+          <a href="<?php echo home_url(); ?>"><h1>Niki</h1></a>
         </div>
         <div id="menu" class="grid-item item-s-20 background-keycolor border-left u-align-center font-sans flex-center">
           <ul>
