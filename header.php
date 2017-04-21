@@ -66,11 +66,11 @@
           <ul>
             <?php $active_slug = get_active_slug(); ?>
             <li <?php menu_active('about-me', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('about-me/'); ?>"><?php echo __('[:es]Acerca de[:en]About me'); ?></a></li>
-            <li <?php menu_active(array('journal', 'post'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
+            <li <?php menu_active(array('journal', 'post'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></li>
             <li <?php menu_active(array('recipe', 'ingredient', 'recipe_category'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
-            <li <?php menu_active('pichon', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('pichon/'); ?>"><?php echo __('[:es]Pichón[:en]Pichón'); ?></a></a></li>
-            <li <?php menu_active('client', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('clients/'); ?>"><?php echo __('[:es]Clientes[:en]Clients'); ?></a></a></li>
-            <li <?php menu_active('press', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></a></li>
+            <li <?php menu_active('pichon', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('pichon/'); ?>"><?php echo __('[:es]Pichón[:en]Pichón'); ?></a></li>
+            <li <?php menu_active('client', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('clients/'); ?>"><?php echo __('[:es]Clientes[:en]Clients'); ?></a></li>
+            <li <?php menu_active('press', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></li>
           </ul>
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
