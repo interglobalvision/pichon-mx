@@ -2060,6 +2060,9 @@ html {
   background-color: #fdfdfd;
   color: #0e0e0e;
 }
+#main-content {
+  min-height: 90vh;
+}
 img {
   max-width: 100%;
   height: auto;
