@@ -29,18 +29,18 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'admin-thumb', 150, 150, false );
   add_image_size( 'opengraph', 1200, 630, true );
 
-  add_image_size( 'col22', 1174, 99999, false );
-  add_image_size( 'col22-5to4', 1174, 939, true );
+  add_image_size( 'col22', 1466, 99999, false );
+  add_image_size( 'col22-5to4', 1466, 1172, true );
 
-  add_image_size( 'col20', 1060, 99999, false );
+  add_image_size( 'col20', 1333, 99999, false );
 
-  add_image_size( 'col14', 736, 99999, false );
-  add_image_size( 'col14-5to4', 736, 588, true );
+  add_image_size( 'col14', 933, 99999, false );
+  add_image_size( 'col14-5to4', 933, 746, true );
 
-  add_image_size( 'col10', 520, 99999, false );
-  add_image_size( 'col10-5to4', 520, 416, true );
+  add_image_size( 'col10', 666, 99999, false );
+  add_image_size( 'col10-5to4', 666, 533, true );
 
-  add_image_size( 'col8', 418, 9999, false );
+  add_image_size( 'col8', 533, 9999, false );
 }
 
 // Register Nav Menus
