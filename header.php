@@ -60,17 +60,17 @@
     <header id="header" class="container">
       <div class="grid-row">
         <div id="logo-holder" class="grid-item item-s-4">
-          <a href="<?php echo home_url(); ?>"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/pichon-logo.svg'); ?></a>
+          <a href="<?php echo home_url(); ?>"><h1>Niki</h1></a>
         </div>
         <div id="menu" class="grid-item item-s-20 background-keycolor border-left u-align-center font-sans flex-center">
           <ul>
             <?php $active_slug = get_active_slug(); ?>
-            <li <?php menu_active('about-us', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('about-us/'); ?>"><?php echo __('[:es]Acerca de[:en]About us'); ?></a></li>
-            <li <?php menu_active(array('journal', 'post'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></a></li>
+            <li <?php menu_active('about-me', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('about-me/'); ?>"><?php echo __('[:es]Acerca de[:en]About me'); ?></a></li>
+            <li <?php menu_active(array('journal', 'post'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></li>
             <li <?php menu_active(array('recipe', 'ingredient', 'recipe_category'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
-            <li <?php menu_active('catering', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('catering/'); ?>"><?php echo __('[:es]Catering[:en]Catering'); ?></a></a></li>
-            <li <?php menu_active('friend', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('friends/'); ?>"><?php echo __('[:es]Amigos[:en]Friends'); ?></a></a></li>
-            <li <?php menu_active('press', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></a></li>
+            <li <?php menu_active('pichon', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('pichon/'); ?>"><?php echo __('[:es]Pichón[:en]Pichón'); ?></a></li>
+            <li <?php menu_active('client', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('clients/'); ?>"><?php echo __('[:es]Clientes[:en]Clients'); ?></a></li>
+            <li <?php menu_active('press', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></li>
           </ul>
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>

@@ -171,33 +171,33 @@ function igv_cmb_metaboxes() {
         'type'       => 'file',
     ) );
 
-    // FRIEND
+    // CLIENT
 
-	 $friend_metabox = new_cmb2_box( array(
-        'id'            => 'friend_metabox',
+	 $client_metabox = new_cmb2_box( array(
+        'id'            => 'client_metabox',
         'title'         => __( 'Contact Details', 'cmb2' ),
-        'object_types'  => array( 'friend', ), // Post type
+        'object_types'  => array( 'client', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
         // 'closed'     => true, // Keep the metabox closed by default
     ) );
 
-    $friend_metabox->add_field( array(
+    $client_metabox->add_field( array(
         'name'       => __( 'Website link', 'cmb2' ),
         'desc'       => __( '(optional)', 'cmb2' ),
         'id'         => $prefix . 'website_link',
         'type'       => 'text_url',
     ) );
 
-    $friend_metabox->add_field( array(
+    $client_metabox->add_field( array(
         'name'       => __( 'Email address', 'cmb2' ),
         'desc'       => __( '(optional)', 'cmb2' ),
         'id'         => $prefix . 'email',
         'type'       => 'text',
     ) );
 
-    $friend_metabox->add_field( array(
+    $client_metabox->add_field( array(
         'name'       => __( 'Phone number', 'cmb2' ),
         'desc'       => __( '(optional)', 'cmb2' ),
         'id'         => $prefix . 'phone',
