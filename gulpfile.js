@@ -53,7 +53,7 @@ gulp.task('javascript-library', function() {
 // STYLES
 
 gulp.task('style', function() {
-  return gulp.src('css/site.styl')
+  return gulp.src(['css/site.styl'])
   .pipe(plumber())
   .pipe(stylus({
       use: [
@@ -89,7 +89,7 @@ gulp.task('images', function () {
 gulp.task('watch', function() {
   gulp.watch(['js/main.js'], ['javascript']);
   gulp.watch(['js/library/*.js'], ['javascript-library']);
-  gulp.watch(['css/site.styl'], ['style']);
+  gulp.watch(['css/site.styl', 'css/responsive/**.styl'], ['style']);
   gulp.watch(['img/src/*.*'], ['images']);
 });
 

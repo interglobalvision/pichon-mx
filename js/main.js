@@ -33,6 +33,9 @@ var Site = {
 };
 
 Site.Layout = {
+  $header: $('#header'),
+  $mainContent: $('#main-content'),
+  $footer: $('#footer'),
   $logo: $('#logo'),
   $logoHolder: $('#logo-holder'),
 
@@ -40,6 +43,7 @@ Site.Layout = {
     var _this = this;
 
     _this.layoutLogo();
+    _this.fixFooter();
   },
 
   resize: function() {
@@ -47,7 +51,7 @@ Site.Layout = {
 
     _this.equalizeRowHeights();
     _this.layoutLogo();
-
+    _this.fixFooter();
   },
 
   equalizeRowHeights: function() {
@@ -86,6 +90,16 @@ Site.Layout = {
       'left': logoOffset + 'px',
     });
 
+  },
+
+  fixFooter: function() {
+    var _this = this;
+    // the +3 is for the boder below the header
+    var offset = _this.$header.outerHeight(true) + _this.$footer.outerHeight(true) + 3;
+
+    _this.$mainContent.css({
+      'min-height': 'calc(100vh - ' + offset + 'px)',
+    });
   },
 };
 
