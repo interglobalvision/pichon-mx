@@ -3050,13 +3050,3 @@ img {
     width: 1300px;
   }
 }
-@media screen and (min-width: 1680px) {
-  .container {
-    width: 1600px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .container {
-    width: 1800px;
-  }
-}
