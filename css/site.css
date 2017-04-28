@@ -2136,11 +2136,11 @@ img {
 }
 .menu-item {
   padding: 0 14px;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 #qtranslate-chooser {
-  padding-left: 28px;
-  font-size: 0.9rem;
+  padding-left: 14px;
+  font-size: 14px;
 }
 .pagination-block {
   height: 5rem;
@@ -2596,11 +2596,11 @@ img {
   }
   .menu-item {
     padding: 0 14px;
-    font-size: 1.5rem;
+    font-size: 22px;
   }
   #qtranslate-chooser {
-    padding-left: 28px;
-    font-size: 0.9rem;
+    padding-left: 14px;
+    font-size: 14px;
   }
   .about-person {
     margin-bottom: 28px;
@@ -3016,11 +3016,11 @@ img {
   }
   .menu-item {
     padding: 0 14px;
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   #qtranslate-chooser {
     padding-left: 28px;
-    font-size: 0.9rem;
+    font-size: 15px;
   }
   .about-person {
     margin-bottom: 28px;
