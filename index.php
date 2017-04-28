@@ -8,8 +8,20 @@ get_header();
 
   <!-- main posts loop -->
   <section id="posts">
-
 <?php
+  if (is_tax()) {
+  $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+?>
+    <div class="container">
+      <div class="grid-row">
+        <div class="grid-item item-s-1 border-bottom"></div>
+        <div class="grid-item item-s-23 padding-basic border-bottom border-left border-right">
+          <h2><?php echo __('[:es]Recetas para : ' . $term->name . '[:en]Recipes for : ' . $term->name); ?></h2>
+        </div>
+      </div>
+    </div>
+<?php
+  }
 if( have_posts() ) {
   $i = 1;
   while( have_posts() ) {
