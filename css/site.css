@@ -1571,7 +1571,7 @@ th {
 }
 body {
   font-family: 'Ume P Mincho Regular', serif;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1.45;
   letter-spacing: 0.005em;
 }
@@ -1950,11 +1950,11 @@ h3 {
   max-height: 100%;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 1.45;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 1.45;
 }
 h3 {
@@ -1973,10 +1973,10 @@ p {
   margin: 0;
 }
 .copy {
-  padding: 28px;
+  padding: 14px;
 }
 .copy p {
-  text-indent: 100%/24;
+  text-indent: 4.166666666666667%;
 }
 .copy p:first-child {
   text-indent: 0;
@@ -2136,11 +2136,11 @@ img {
 }
 .menu-item {
   padding: 0 14px;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 #qtranslate-chooser {
-  padding-left: 28px;
-  font-size: 0.9rem;
+  padding-left: 14px;
+  font-size: 14px;
 }
 .pagination-block {
   height: 5rem;
@@ -2543,6 +2543,82 @@ img {
   .mobile-only {
     display: none;
   }
+  body {
+    font-size: 17px;
+    line-height: 1.45;
+    letter-spacing: 0.005em;
+  }
+  .font-leading-wide {
+    line-height: 1.6;
+  }
+  .font-larger {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 3em;
+    line-height: 1.45;
+  }
+  h2 {
+    font-size: 2em;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.45;
+  }
+  h3.rotated-heading {
+    padding: 14px;
+  }
+  .copy {
+    padding: 28px;
+  }
+  .copy ul {
+    margin: 28px;
+  }
+  ol li {
+    margin-bottom: 14px;
+  }
+  ol li:before {
+    padding-right: 14px;
+  }
+  .padding-basic {
+    padding: 28px;
+  }
+  .padding-small {
+    padding: 14px;
+  }
+  .arrow {
+    font-size: 1.7rem;
+  }
+  #logo {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .menu-item {
+    padding: 0 14px;
+    font-size: 22px;
+  }
+  #qtranslate-chooser {
+    padding-left: 14px;
+    font-size: 14px;
+  }
+  .about-person {
+    margin-bottom: 28px;
+  }
+  #single-recipe-ingredients-heading {
+    margin-top: 28px;
+  }
+  #single-event-title {
+    padding: 28px 28px 0 28px;
+  }
+  #button-tickets {
+    padding: 28px;
+  }
+  #footer {
+    padding-top: 70px;
+    padding-bottom: 49px;
+    line-height: 1.6;
+  }
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -2887,6 +2963,82 @@ img {
   .desktop-only {
     display: initial;
   }
+  body {
+    font-size: 19px;
+    line-height: 1.45;
+    letter-spacing: 0.005em;
+  }
+  .font-leading-wide {
+    line-height: 1.6;
+  }
+  .font-larger {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 3em;
+    line-height: 1.45;
+  }
+  h2 {
+    font-size: 2em;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.45;
+  }
+  h3.rotated-heading {
+    padding: 14px;
+  }
+  .copy {
+    padding: 28px;
+  }
+  .copy ul {
+    margin: 28px;
+  }
+  ol li {
+    margin-bottom: 14px;
+  }
+  ol li:before {
+    padding-right: 14px;
+  }
+  .padding-basic {
+    padding: 28px;
+  }
+  .padding-small {
+    padding: 14px;
+  }
+  .arrow {
+    font-size: 1.7rem;
+  }
+  #logo {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .menu-item {
+    padding: 0 14px;
+    font-size: 24px;
+  }
+  #qtranslate-chooser {
+    padding-left: 28px;
+    font-size: 15px;
+  }
+  .about-person {
+    margin-bottom: 28px;
+  }
+  #single-recipe-ingredients-heading {
+    margin-top: 28px;
+  }
+  #single-event-title {
+    padding: 28px 28px 0 28px;
+  }
+  #button-tickets {
+    padding: 28px;
+  }
+  #footer {
+    padding-top: 70px;
+    padding-bottom: 49px;
+    line-height: 1.6;
+  }
 }
 @media screen and (min-width: 1280px) {
   .container {
@@ -2896,15 +3048,5 @@ img {
 @media screen and (min-width: 1366px) {
   .container {
     width: 1300px;
-  }
-}
-@media screen and (min-width: 1680px) {
-  .container {
-    width: 1600px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .container {
-    width: 1800px;
   }
 }

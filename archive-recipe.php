@@ -11,7 +11,7 @@ get_header();
       <div class="grid-row">
         <div class="grid-item item-s-1"></div>
         <div class="grid-item item-s-23 padding-basic border-bottom border-left border-right">
-          <h2><?php echo __('[:es]Buscar por Categoría[:en]Search by Category'); ?> :</h2>
+          <h2><?php echo __('[:es]Buscar por Categoría[:en]Search by Category'); ?>&thinsp;:</h2>
           <ul class="u-inline-list font-larger">
           <?php
             $taxonomies = array(
@@ -34,7 +34,7 @@ get_header();
       </div>
       <div class="grid-row">
         <div class="grid-item item-s-23 offset-s-1 padding-basic border-left">
-          <h2><?php echo __('[:es]Buscar por ingrediente[:en]Search by Ingredient'); ?> :</h2>
+          <h2><?php echo __('[:es]Buscar por ingrediente[:en]Search by Ingredient'); ?>&thinsp;:</h2>
           <ul class="u-inline-list font-larger">
           <?php
             $taxonomies = array(
