@@ -2098,22 +2098,27 @@ img {
 .arrow {
   font-size: 1.7rem;
 }
-#logo {
-  width: 180px;
-  height: 80px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  position: relative;
-  left: 0px;
-  -webkit-transition: left 300ms;
-  transition: left 300ms;
+#site-title {
+  padding: 14px;
+  font-size: 2em;
 }
-#menu {
+#menu-holder {
   position: relative;
   color: #fff;
 }
-#menu ul {
+#menu-holder:after {
+  content: '';
+  background-color: #4bb064;
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+}
+#menu {
   display: inline-block;
+  padding: 7px;
 }
 #menu li {
   display: inline-block;
@@ -2124,22 +2129,12 @@ img {
 #menu li.active a {
   border-bottom: 2px solid #fff;
 }
-#menu:after {
-  content: '';
-  background-color: #4bb064;
-  position: absolute;
-  width: 2000px;
-  height: 100%;
-  top: 0px;
-  left: 0;
-  z-index: -1;
-}
 .menu-item {
-  padding: 0 14px;
+  padding: 4px 14px;
   font-size: 20px;
 }
 #qtranslate-chooser {
-  padding-left: 14px;
+  padding-right: 14px;
   font-size: 14px;
 }
 .pagination-block {
@@ -2590,12 +2585,15 @@ img {
   .arrow {
     font-size: 1.7rem;
   }
-  #logo {
-    padding-top: 7px;
-    padding-bottom: 7px;
+  #site-title {
+    padding: 0;
+    font-size: 1.7em;
+  }
+  #menu {
+    padding: 14px;
   }
   .menu-item {
-    padding: 0 14px;
+    padding: 4px 14px;
     font-size: 22px;
   }
   #qtranslate-chooser {
@@ -3010,9 +3008,11 @@ img {
   .arrow {
     font-size: 1.7rem;
   }
-  #logo {
-    padding-top: 7px;
-    padding-bottom: 7px;
+  #site-title {
+    font-size: 2em;
+  }
+  #menu {
+    padding: 14px;
   }
   .menu-item {
     padding: 0 14px;
