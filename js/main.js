@@ -36,8 +36,10 @@ Site.Layout = {
   $header: $('#header'),
   $mainContent: $('#main-content'),
   $footer: $('#footer'),
+/*
   $logo: $('#logo'),
   $logoHolder: $('#logo-holder'),
+*/
 
   init: function() {
     var _this = this;
@@ -80,6 +82,7 @@ Site.Layout = {
   layoutLogo: function() {
     var _this = this;
 
+/*
     var offset = _this.$logoHolder.offset();
     var holderWidth = _this.$logoHolder.outerWidth();
     var logoWidth = _this.$logo.outerWidth();
@@ -89,6 +92,7 @@ Site.Layout = {
     _this.$logo.css({
       'left': logoOffset + 'px',
     });
+*/
 
   },
 
