@@ -101,7 +101,23 @@ class IGV_Admin {
 			),
 		) );
 
-		// Set our CMB2 fields
+		$cmb->add_field( array(
+			'name' => __( 'Menu', 'IGV' ),
+			'id'   => $this->prefix . 'menu_title',
+			'type' => 'title',
+		) );
+
+		$cmb->add_field( array(
+			'name' => __( 'Show Journal link in menu', 'IGV' ),
+			'id'   => $this->prefix . 'show_journal',
+			'type' => 'checkbox',
+		) );
+
+		$cmb->add_field( array(
+			'name' => __( 'Home', 'IGV' ),
+			'id'   => $this->prefix . 'home_title',
+			'type' => 'title',
+		) );
 
 		$cmb->add_field( array(
 			'name' => __( 'Home Slideshow', 'IGV' ),

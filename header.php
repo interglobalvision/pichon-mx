@@ -33,10 +33,19 @@
         </div>
         <div id="menu" class="grid-item item-s-20 background-keycolor border-left u-align-center font-sans flex-center">
           <ul>
-            <?php $active_slug = get_active_slug(); ?>
+            <?php
+              $active_slug = get_active_slug();
+              $show_journal = IGV_get_option('_igv_show_journal');
+            ?>
             <li <?php menu_active('about-me', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('about-me/'); ?>"><?php echo __('[:es]Acerca de[:en]About me'); ?></a></li>
             <li <?php menu_active('pichon', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('pichon/'); ?>"><?php echo __('[:es]Pichón[:en]Pichón'); ?></a></li>
+            <?php
+              if ($show_journal) {
+            ?>
             <li <?php menu_active(array('journal', 'post'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></li>
+            <?php
+              }
+            ?>
             <li <?php menu_active(array('recipe', 'ingredient', 'recipe_category'), $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></a></li>
             <li <?php menu_active('client', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('clients/'); ?>"><?php echo __('[:es]Clientes[:en]Clients'); ?></a></li>
             <li <?php menu_active('press', $active_slug, 'menu-item'); ?>><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></li>

@@ -3,12 +3,21 @@
         <div class="grid-row u-align-center">
           <div class="grid-item item-s-8">
             <ul>
-            <li><a href="<?php echo home_url('about-me/'); ?>"><?php echo __('[:es]Acerca de[:en]About me'); ?></a></li>
-            <li><a href="<?php echo home_url('pichon/'); ?>"><?php echo __('[:es]Pichón[:en]Pichón'); ?></a></li>
-            <li><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></li>
-            <li><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></li>
-            <li><a href="<?php echo home_url('clients/'); ?>"><?php echo __('[:es]Clientes[:en]Clients'); ?></a></li>
-            <li><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></li>
+            <?php
+                $show_journal = IGV_get_option('_igv_show_journal');
+            ?>
+              <li><a href="<?php echo home_url('about-me/'); ?>"><?php echo __('[:es]Acerca de[:en]About me'); ?></a></li>
+              <li><a href="<?php echo home_url('pichon/'); ?>"><?php echo __('[:es]Pichón[:en]Pichón'); ?></a></li>
+              <?php
+                if ($show_journal) {
+              ?>
+              <li><a href="<?php echo home_url('journal/'); ?>"><?php echo __('[:es]Journal[:en]Journal'); ?></a></li>
+              <?php
+                }
+              ?>
+              <li><a href="<?php echo home_url('recipes/'); ?>"><?php echo __('[:es]Recetas[:en]Recipes'); ?></a></li>
+              <li><a href="<?php echo home_url('clients/'); ?>"><?php echo __('[:es]Clientes[:en]Clients'); ?></a></li>
+              <li><a href="<?php echo home_url('press/'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></li>
             </ul>
           </div>
 
