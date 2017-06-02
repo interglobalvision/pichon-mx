@@ -2119,18 +2119,20 @@ img {
   left: 0;
   z-index: -1;
 }
-#menu {
-  display: inline-block;
-  padding: 7px;
-}
-#menu li {
+#menu-holder ul {
   display: inline-block;
 }
-#menu li a {
+#menu-holder li {
+  display: inline-block;
+}
+#menu-holder li a {
   padding-bottom: 2px;
 }
-#menu li.active a {
+#menu-holder li.active a {
   border-bottom: 2px solid #fff;
+}
+#menu {
+  padding: 7px;
 }
 .menu-item {
   padding: 4px 14px;
