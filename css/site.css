@@ -2098,6 +2098,9 @@ img {
 .arrow {
   font-size: 1.7rem;
 }
+#site-title-holder {
+  border-left: 3px solid #0e0e0e;
+}
 #site-title {
   padding: 14px;
   font-size: 2em;
@@ -2584,6 +2587,9 @@ img {
   }
   .arrow {
     font-size: 1.7rem;
+  }
+  #site-title-holder {
+    border: 0;
   }
   #site-title {
     padding: 0;

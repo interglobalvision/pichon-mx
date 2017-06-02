@@ -28,7 +28,7 @@
   <div class="border-bottom u-overflow-hidden">
     <header id="header" class="container">
       <div class="grid-row">
-        <div class="grid-item item-s-24 item-m-8 item-l-7 flex-center flex-left-align">
+        <div id="site-title-holder" class="grid-item item-s-24 item-m-8 item-l-7 flex-center flex-left-align">
           <a href="<?php echo home_url(); ?>"><h1 id="site-title">Niki Nakazawa</h1></a>
         </div>
         <div id="menu-holder" class="grid-item item-s-24 item-m-16 item-l-17 flex-center background-keycolor border-left font-sans ">
