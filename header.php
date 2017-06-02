@@ -28,11 +28,11 @@
   <div class="border-bottom u-overflow-hidden">
     <header id="header" class="container">
       <div class="grid-row">
-        <div id="logo-holder" class="grid-item item-s-4">
-          <a href="<?php echo home_url(); ?>"><h1>Niki</h1></a>
+        <div class="grid-item item-s-24 item-m-7 flex-center flex-left-align">
+          <a href="<?php echo home_url(); ?>"><h1 id="site-title">Niki Nakazawa</h1></a>
         </div>
-        <div id="menu" class="grid-item item-s-20 background-keycolor border-left u-align-center font-sans flex-center">
-          <ul>
+        <div id="menu-holder" class="grid-item item-s-24 item-m-17 flex-center background-keycolor border-left font-sans ">
+          <ul id="menu">
             <?php
               $active_slug = get_active_slug();
               $show_journal = IGV_get_option('_igv_show_journal');
