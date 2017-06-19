@@ -2098,33 +2098,18 @@ img {
 .arrow {
   font-size: 1.7rem;
 }
-#logo {
-  width: 180px;
-  height: 80px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  position: relative;
-  left: 0px;
-  -webkit-transition: left 300ms;
-  transition: left 300ms;
+#site-title-holder {
+  border-left: 3px solid #0e0e0e;
 }
-#menu {
+#site-title {
+  padding: 14px;
+  font-size: 2em;
+}
+#menu-holder {
   position: relative;
   color: #fff;
 }
-#menu ul {
-  display: inline-block;
-}
-#menu li {
-  display: inline-block;
-}
-#menu li a {
-  padding-bottom: 2px;
-}
-#menu li.active a {
-  border-bottom: 2px solid #fff;
-}
-#menu:after {
+#menu-holder:after {
   content: '';
   background-color: #4bb064;
   position: absolute;
@@ -2134,12 +2119,27 @@ img {
   left: 0;
   z-index: -1;
 }
+#menu-holder ul {
+  display: inline-block;
+}
+#menu-holder li {
+  display: inline-block;
+}
+#menu-holder li a {
+  padding-bottom: 2px;
+}
+#menu-holder li.active a {
+  border-bottom: 2px solid #fff;
+}
+#menu {
+  padding: 7px;
+}
 .menu-item {
-  padding: 0 14px;
+  padding: 4px 14px;
   font-size: 20px;
 }
 #qtranslate-chooser {
-  padding-left: 14px;
+  padding-right: 14px;
   font-size: 14px;
 }
 .pagination-block {
@@ -2590,12 +2590,17 @@ img {
   .arrow {
     font-size: 1.7rem;
   }
-  #logo {
-    padding-top: 7px;
-    padding-bottom: 7px;
+  #site-title-holder {
+    border: 0;
+  }
+  #site-title {
+    padding: 0;
+  }
+  #menu {
+    padding: 14px;
   }
   .menu-item {
-    padding: 0 14px;
+    padding: 4px 14px;
     font-size: 22px;
   }
   #qtranslate-chooser {
@@ -3010,9 +3015,8 @@ img {
   .arrow {
     font-size: 1.7rem;
   }
-  #logo {
-    padding-top: 7px;
-    padding-bottom: 7px;
+  #menu {
+    padding: 28px 14px;
   }
   .menu-item {
     padding: 0 14px;

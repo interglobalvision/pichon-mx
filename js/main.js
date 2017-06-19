@@ -36,13 +36,10 @@ Site.Layout = {
   $header: $('#header'),
   $mainContent: $('#main-content'),
   $footer: $('#footer'),
-  $logo: $('#logo'),
-  $logoHolder: $('#logo-holder'),
 
   init: function() {
     var _this = this;
 
-    _this.layoutLogo();
     _this.fixFooter();
   },
 
@@ -50,7 +47,6 @@ Site.Layout = {
     var _this = this;
 
     _this.equalizeRowHeights();
-    _this.layoutLogo();
     _this.fixFooter();
   },
 
@@ -73,21 +69,6 @@ Site.Layout = {
 
       $children.css('height', maxHeight);
 
-    });
-
-  },
-
-  layoutLogo: function() {
-    var _this = this;
-
-    var offset = _this.$logoHolder.offset();
-    var holderWidth = _this.$logoHolder.outerWidth();
-    var logoWidth = _this.$logo.outerWidth();
-    var totalWidth = offset.left + holderWidth;
-    var logoOffset = (totalWidth / 2) - (logoWidth / 2) - offset.left;
-
-    _this.$logo.css({
-      'left': logoOffset + 'px',
     });
 
   },
